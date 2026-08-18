@@ -136,7 +136,7 @@
 
 <div class="site-header">
   <h1>Holiday &amp; Squash Junior Calendar — 2026–2027</h1>
-  <p>UK · US · Hong Kong · Singapore · China · International Squash Events &nbsp;·&nbsp; Generated: 18 Aug 2026 13:01</p>
+  <p>UK · US · Hong Kong · Singapore · China · International Squash Events &nbsp;·&nbsp; Generated: 18 Aug 2026 13:09</p>
   <nav class="tab-bar" id="tabBar"></nav>
 </div>
 
@@ -156,6 +156,7 @@ const TABS  = [{"id": "master", "label": "All Holidays", "sheet": "Master Calend
 const CTRY_COLORS   = {"UK": "#D6E4F7", "US": "#FFF2CC", "Hong Kong": "#FCE4D6", "Singapore": "#E2EFDA", "China": "#F4CCCC", "EU": "#EAD1DC", "Japan": "#D9EAD3", "Reference": "#F2F2F2"};
 const TYPE_COLORS   = {"Public Holiday": "#DDEEFF", "School Break - Local/State": "#D6EED6", "School Break - International": "#E6F4E6"};
 const SQUASH_COLORS = {"World Championship": {"bg": "#7B3F9E", "text": "#fff"}, "Asian Championship": {"bg": "#CC0000", "text": "#fff"}, "Diamond": {"bg": "#B4C7E7", "text": "#000"}, "Platinum": {"bg": "#FCE4D6", "text": "#000"}, "Gold": {"bg": "#FFF2CC", "text": "#000"}, "Silver": {"bg": "#E2EFDA", "text": "#000"}, "Bronze": {"bg": "#D6E4F7", "text": "#000"}, "National/Regional": {"bg": "#F2F2F2", "text": "#000"}, "Estimated": {"bg": "#FFE082", "text": "#000"}};
+const MONTH_NAMES   = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
 // ── Colour helpers ────────────────────────────────────────────────────────────
 function rowStyle(tab, row) {
@@ -260,8 +261,6 @@ function getFilterFields(tab, sheet) {
 }
 
 // ── Month-year helper ─────────────────────────────────────────────────────────
-const MONTH_NAMES = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-
 function parseMonthYear(dateStr) {
   // "17 Feb 2026" → {label:"Feb 2026", key:2026*12+1}
   const parts = (dateStr || '').trim().split(/\s+/);

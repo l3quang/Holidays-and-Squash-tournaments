@@ -253,6 +253,7 @@ const TABS  = {tabs_meta_js};
 const CTRY_COLORS   = {country_colors_js};
 const TYPE_COLORS   = {type_colors_js};
 const SQUASH_COLORS = {squash_colors_js};
+const MONTH_NAMES   = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
 // ── Colour helpers ────────────────────────────────────────────────────────────
 function rowStyle(tab, row) {{
@@ -357,8 +358,6 @@ function getFilterFields(tab, sheet) {{
 }}
 
 // ── Month-year helper ─────────────────────────────────────────────────────────
-const MONTH_NAMES = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-
 function parseMonthYear(dateStr) {{
   // "17 Feb 2026" → {{label:"Feb 2026", key:2026*12+1}}
   const parts = (dateStr || '').trim().split(/\\s+/);
