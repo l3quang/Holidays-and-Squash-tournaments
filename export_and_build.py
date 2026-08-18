@@ -260,6 +260,50 @@ html = f"""<!DOCTYPE html>
   }}
   .stat-chip strong {{ font-size:18px; display:block; color:var(--navy); }}
 
+  /* ── View toggle ── */
+  .view-toggle {{ display:flex; gap:4px; margin-left:4px; }}
+  .view-btn {{
+    padding:5px 12px; border:1px solid var(--border); border-radius:var(--radius);
+    font-size:12px; font-family:inherit; background:#fff; cursor:pointer;
+  }}
+  .view-btn.active {{ background:var(--navy); color:#fff; border-color:var(--navy); }}
+
+  /* ── Calendar ── */
+  .cal-wrap {{ display:none; }}
+  .cal-wrap.active {{ display:block; }}
+  .tbl-wrap.hidden {{ display:none; }}
+  .cal-nav {{ display:flex; align-items:center; gap:12px; padding:10px 0 8px; }}
+  .cal-nav button {{
+    padding:4px 14px; border:1px solid var(--border); border-radius:var(--radius);
+    background:#fff; cursor:pointer; font-size:18px; line-height:1;
+  }}
+  .cal-nav button:hover {{ background:#f0f4f8; }}
+  .cal-label {{ font-weight:700; font-size:15px; color:var(--navy); min-width:160px; text-align:center; }}
+  .cal-grid {{
+    display:grid; grid-template-columns:repeat(7,1fr);
+    border-left:1px solid var(--border); border-top:1px solid var(--border);
+    background:#fff; border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden;
+  }}
+  .cal-hdr {{
+    background:var(--blue); color:#fff; text-align:center;
+    padding:6px 4px; font-size:11px; font-weight:700;
+    border-right:1px solid rgba(255,255,255,.2); border-bottom:1px solid var(--border);
+  }}
+  .cal-cell {{
+    min-height:90px; padding:4px; border-right:1px solid var(--border);
+    border-bottom:1px solid var(--border); background:#fff;
+  }}
+  .cal-cell.other-month {{ background:#f8f9fc; }}
+  .cal-cell.today {{ background:#EFF6FF; }}
+  .cal-day-num {{ font-size:11px; color:var(--muted); margin-bottom:3px; font-weight:600; }}
+  .cal-cell.today .cal-day-num {{ color:var(--blue); font-weight:700; }}
+  .cal-ev {{
+    display:block; padding:2px 5px; border-radius:3px; font-size:10.5px;
+    margin-bottom:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    cursor:default; border:1px solid rgba(0,0,0,.08); line-height:1.4;
+  }}
+  .cal-more {{ font-size:10px; color:var(--blue); margin-top:1px; }}
+
   @media(max-width:600px) {{
     .site-header h1 {{ font-size:16px; }}
     .main {{ padding:0 12px 24px; }}
@@ -358,6 +402,10 @@ function buildPanel(tab, sheet) {{
         <option value="">All dates</option>
       </select>
       <span class="row-count" data-rowcount></span>
+      <div class="view-toggle">
+        <button class="view-btn active" data-view="table">Table</button>
+        <button class="view-btn" data-view="calendar">Calendar</button>
+      </div>
     </div>
     ${{tab.id === 'squash' ? buildLegend() : ''}}
     <div class="tbl-wrap">
@@ -365,6 +413,14 @@ function buildPanel(tab, sheet) {{
         <thead><tr>${{thHTML}}</tr></thead>
         <tbody data-tbody></tbody>
       </table>
+    </div>
+    <div class="cal-wrap">
+      <div class="cal-nav">
+        <button data-cal-prev>&#8249;</button>
+        <span class="cal-label" data-cal-label></span>
+        <button data-cal-next>&#8250;</button>
+      </div>
+      <div class="cal-grid" data-cal-body></div>
     </div>`;
 }}
 
@@ -412,6 +468,69 @@ function msBtnLabel(btn, pnl, label) {{
     btn.textContent = checked.length + ' selected ▾';
 }}
 
+const FULL_MONTHS = ['January','February','March','April','May','June',
+                     'July','August','September','October','November','December'];
+
+function parseDate(str) {{
+  if (!str) return null;
+  const p = str.trim().split(/\\s+/);
+  if (p.length < 3) return null;
+  const mi = MONTH_NAMES.findIndex(m => m.toLowerCase() === (p[1]||'').toLowerCase());
+  const yr = parseInt(p[2], 10), d = parseInt(p[0], 10);
+  if (mi < 0 || isNaN(yr) || isNaN(d)) return null;
+  return new Date(yr, mi, d);
+}}
+
+function renderCalGrid(visible, tab, yr, mo, bodyEl) {{
+  const today       = new Date();
+  const firstDay    = new Date(yr, mo, 1);
+  const startOffset = (firstDay.getDay() + 6) % 7;   // Mon=0 … Sun=6
+  const daysInMonth = new Date(yr, mo + 1, 0).getDate();
+  const totalCells  = Math.ceil((startOffset + daysInMonth) / 7) * 7;
+
+  const evByDay = {{}};
+  visible.forEach(row => {{
+    const sd = parseDate(row['Start Date'] || '');
+    const ed = parseDate(row['End Date'] || '') || (sd ? new Date(sd) : null);
+    if (!sd) return;
+    const cur = new Date(sd);
+    while (cur <= ed) {{
+      if (cur.getFullYear() === yr && cur.getMonth() === mo) {{
+        const k = cur.getDate();
+        (evByDay[k] = evByDay[k] || []).push(row);
+      }}
+      cur.setDate(cur.getDate() + 1);
+    }}
+  }});
+
+  const DAY_NAMES = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  let html = DAY_NAMES.map(d => `<div class="cal-hdr">${{d}}</div>`).join('');
+
+  for (let i = 0; i < totalCells; i++) {{
+    const offset  = i - startOffset + 1;
+    const isOther = offset < 1 || offset > daysInMonth;
+    const dayNum  = isOther ? new Date(yr, mo, offset).getDate() : offset;
+    const isToday = !isOther &&
+      today.getFullYear() === yr && today.getMonth() === mo && today.getDate() === offset;
+
+    const evs   = isOther ? [] : (evByDay[offset] || []);
+    const MAX   = 3;
+    const shown = evs.slice(0, MAX);
+    const more  = evs.length - MAX;
+
+    const pills = shown.map(row => {{
+      const st   = rowStyle(tab, row);
+      const name = esc(row['Event'] || row['Holiday / Event'] || row['Name'] || Object.values(row).find(v => v) || '');
+      return `<span class="cal-ev" style="${{st}}" title="${{name}}">${{name}}</span>`;
+    }}).join('');
+    const moreDiv = more > 0 ? `<div class="cal-more">+${{more}} more</div>` : '';
+
+    const cls = 'cal-cell' + (isOther ? ' other-month' : '') + (isToday ? ' today' : '');
+    html += `<div class="${{cls}}"><div class="cal-day-num">${{dayNum}}</div>${{pills}}${{moreDiv}}</div>`;
+  }}
+  bodyEl.innerHTML = html;
+}}
+
 function initPanel(tab, sheet, panel) {{
   const tbody    = panel.querySelector('[data-tbody]');
   const search   = panel.querySelector('[data-search]');
@@ -419,6 +538,33 @@ function initPanel(tab, sheet, panel) {{
   const monthSel = panel.querySelector('[data-month-filter]');
   const rcEl     = panel.querySelector('[data-rowcount]');
   const ths      = panel.querySelectorAll('thead th');
+  const tblWrap  = panel.querySelector('.tbl-wrap');
+  const calWrap  = panel.querySelector('.cal-wrap');
+  const calBody  = panel.querySelector('[data-cal-body]');
+  const calLabel = panel.querySelector('[data-cal-label]');
+  const viewBtns = panel.querySelectorAll('[data-view]');
+
+  let curView = 'table';
+  const now0  = new Date();
+  let calYear = now0.getFullYear(), calMonth = now0.getMonth();
+
+  function setView(v) {{
+    curView = v;
+    tblWrap.classList.toggle('hidden', v === 'calendar');
+    calWrap.classList.toggle('active', v === 'calendar');
+    viewBtns.forEach(b => b.classList.toggle('active', b.dataset.view === v));
+    render();
+  }}
+
+  viewBtns.forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
+  panel.querySelector('[data-cal-prev]')?.addEventListener('click', () => {{
+    calMonth--; if (calMonth < 0) {{ calMonth = 11; calYear--; }}
+    if (curView === 'calendar') render();
+  }});
+  panel.querySelector('[data-cal-next]')?.addEventListener('click', () => {{
+    calMonth++; if (calMonth > 11) {{ calMonth = 0; calYear++; }}
+    if (curView === 'calendar') render();
+  }});
 
   // Populate multi-select dropdowns
   msWraps.forEach(wrap => {{
@@ -525,22 +671,25 @@ function initPanel(tab, sheet, panel) {{
 
     if (!visible.length) {{
       tbody.innerHTML = `<tr><td colspan="${{sheet.headers.length}}" class="empty-state">No matching rows</td></tr>`;
-      return;
-    }}
-
-    tbody.innerHTML = visible.map(row => {{
-      const style = rowStyle(tab, row);
-      const tds = sheet.headers.map(h => {{
-        let val = esc(row[h] || '');
-        if (h === 'Confirmed?') {{
-          const cls = val.includes('Confirmed') ? 'confirmed-yes' : 'confirmed-no';
-          val = `<span class="badge ${{cls}}">${{val}}</span>`;
-        }}
-        const cls = h.includes('Notes') || h.includes('Source') ? ' class="notes-col"' : '';
-        return `<td${{cls}}>${{val}}</td>`;
+    }} else {{
+      tbody.innerHTML = visible.map(row => {{
+        const style = rowStyle(tab, row);
+        const tds = sheet.headers.map(h => {{
+          let val = esc(row[h] || '');
+          if (h === 'Confirmed?') {{
+            const cls = val.includes('Confirmed') ? 'confirmed-yes' : 'confirmed-no';
+            val = `<span class="badge ${{cls}}">${{val}}</span>`;
+          }}
+          const cls = h.includes('Notes') || h.includes('Source') ? ' class="notes-col"' : '';
+          return `<td${{cls}}>${{val}}</td>`;
+        }}).join('');
+        return `<tr style="${{style}}">${{tds}}</tr>`;
       }}).join('');
-      return `<tr style="${{style}}">${{tds}}</tr>`;
-    }}).join('');
+    }}
+    if (curView === 'calendar') {{
+      calLabel.textContent = FULL_MONTHS[calMonth] + ' ' + calYear;
+      renderCalGrid(visible, tab, calYear, calMonth, calBody);
+    }}
   }}
 
   ths.forEach((th, ci) => {{
