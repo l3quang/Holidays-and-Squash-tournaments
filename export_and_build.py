@@ -5,6 +5,7 @@ then builds a self-contained index.html dashboard.
 
 import json, re, os
 from pathlib import Path
+from datetime import datetime
 import openpyxl
 
 BASE = Path(r"D:\Work\claude\QL\holiday\Holidays and Squash tournaments")
@@ -240,7 +241,7 @@ html = f"""<!DOCTYPE html>
 
 <div class="site-header">
   <h1>Holiday &amp; Squash Junior Calendar — 2026–2027</h1>
-  <p>UK · US · Hong Kong · Singapore · China · International Squash Events</p>
+  <p>UK · US · Hong Kong · Singapore · China · International Squash Events &nbsp;·&nbsp; Generated: {datetime.now().strftime("%d %b %Y %H:%M")}</p>
   <nav class="tab-bar" id="tabBar"></nav>
 </div>
 
@@ -319,8 +320,8 @@ function buildPanel(tab, sheet) {{
     <div class="toolbar">
       <input type="text" placeholder="Search…" data-search>
       ${{filterHTML}}
-      <select data-month-filter title="Filter by Month">
-        <option value="">All Months</option>
+      <select data-month-filter title="Show from month onwards">
+        <option value="">All dates</option>
       </select>
       <span class="row-count" data-rowcount></span>
     </div>
@@ -355,10 +356,17 @@ function getFilterFields(tab, sheet) {{
   return fields.filter(f => sheet.headers.includes(f.key));
 }}
 
-// ── Month helper ─────────────────────────────────────────────────────────────
-function parseMonth(dateStr) {{
-  const m = (dateStr || '').match(/\\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\\b/i);
-  return m ? m[1][0].toUpperCase() + m[1].slice(1).toLowerCase() : '';
+// ── Month-year helper ─────────────────────────────────────────────────────────
+const MONTH_NAMES = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+function parseMonthYear(dateStr) {{
+  // "17 Feb 2026" → {{label:"Feb 2026", key:2026*12+1}}
+  const parts = (dateStr || '').trim().split(/\\s+/);
+  if (parts.length < 3) return null;
+  const mi = MONTH_NAMES.findIndex(m => m.toLowerCase() === (parts[1]||'').toLowerCase());
+  const yr = parseInt(parts[2], 10);
+  if (mi < 0 || isNaN(yr)) return null;
+  return {{label: MONTH_NAMES[mi] + ' ' + yr, key: yr * 12 + mi}};
 }}
 
 function initPanel(tab, sheet, panel) {{
@@ -380,12 +388,15 @@ function initPanel(tab, sheet, panel) {{
     }});
   }});
 
-  // Populate month select in calendar order
-  const MONTH_ORDER = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const monthsInData = new Set(sheet.rows.map(r => parseMonth(r['Start Date'] || '')).filter(Boolean));
-  MONTH_ORDER.filter(m => monthsInData.has(m)).forEach(m => {{
+  // Populate month-year select in chronological order
+  const seen = new Map();
+  sheet.rows.forEach(r => {{
+    const my = parseMonthYear(r['Start Date'] || '');
+    if (my && !seen.has(my.key)) seen.set(my.key, my.label);
+  }});
+  [...seen.entries()].sort((a,b) => a[0]-b[0]).forEach(([key, label]) => {{
     const opt = document.createElement('option');
-    opt.value = m; opt.textContent = m;
+    opt.value = key; opt.textContent = 'From ' + label;
     monthSel.appendChild(opt);
   }});
 
@@ -396,18 +407,21 @@ function initPanel(tab, sheet, panel) {{
     const q = (search?.value || '').toLowerCase();
     const filters = {{}};
     selects.forEach(s => {{ if (s.value) filters[s.dataset.filter] = s.value; }});
-    const month = monthSel ? monthSel.value : '';
-    return {{q, filters, month}};
+    const fromKey = monthSel && monthSel.value ? parseInt(monthSel.value, 10) : null;
+    return {{q, filters, fromKey}};
   }}
 
   function render() {{
-    const {{q, filters, month}} = getFilters();
+    const {{q, filters, fromKey}} = getFilters();
     let visible = rows.filter(row => {{
       if (q && !Object.values(row).some(v => v.toLowerCase().includes(q))) return false;
       for (const [k, v] of Object.entries(filters)) {{
         if (row[k] !== v) return false;
       }}
-      if (month && parseMonth(row['Start Date'] || '') !== month) return false;
+      if (fromKey !== null) {{
+        const my = parseMonthYear(row['Start Date'] || '');
+        if (!my || my.key < fromKey) return false;
+      }}
       return true;
     }});
 
