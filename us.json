@@ -1,0 +1,235 @@
+{
+  "sheet": "US",
+  "headers": [
+    "Start Date",
+    "End Date",
+    "Day",
+    "Holiday / Break",
+    "Type",
+    "System / Source",
+    "Acad. Year",
+    "Notes"
+  ],
+  "rows": [
+    {
+      "Start Date": "1 Jan 2026",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "New Year's Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "19 Jan 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Martin Luther King Jr. Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "16 Feb 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Presidents' Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "25 May 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Memorial Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "19 Jun 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Juneteenth",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "3 Jul 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Independence Day (observed)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Sat 4 Jul → observed Fri 3 Jul"
+    },
+    {
+      "Start Date": "7 Sep 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Labor Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "12 Oct 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Columbus Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "11 Nov 2026",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Veterans Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "26 Nov 2026",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "Thanksgiving Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "25 Dec 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Christmas Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "1 Jan 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "New Year's Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "18 Jan 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Martin Luther King Jr. Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "15 Feb 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Presidents' Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "31 May 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Memorial Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "18 Jun 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Juneteenth (observed)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Sat 19 Jun → observed Fri 18 Jun"
+    },
+    {
+      "Start Date": "5 Jul 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Independence Day (observed)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Sun 4 Jul → observed Mon 5 Jul"
+    },
+    {
+      "Start Date": "6 Sep 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Labor Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "11 Oct 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Columbus Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "11 Nov 2027",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "Veterans Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "25 Nov 2027",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "Thanksgiving Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "24 Dec 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Christmas Day (observed)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Sat 25 Dec → observed Fri 24 Dec"
+    }
+  ]
+}

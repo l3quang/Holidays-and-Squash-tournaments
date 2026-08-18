@@ -1,0 +1,755 @@
+{
+  "sheet": "China",
+  "headers": [
+    "Start Date",
+    "End Date",
+    "Day",
+    "Holiday / Break",
+    "Type",
+    "System / Source",
+    "Acad. Year",
+    "Notes"
+  ],
+  "rows": [
+    {
+      "Start Date": "1 Jan 2026",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "New Year's Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Official holiday: 1-3 Jan 2026"
+    },
+    {
+      "Start Date": "2 Jan 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "New Year Holiday Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "3 Jan 2026",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "New Year Holiday Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "24 Jan 2026",
+      "End Date": "1 Mar 2026",
+      "Day": "Sat",
+      "Holiday / Break": "Winter Break 2025/26 — Beijing Local",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2025/26",
+      "Notes": "Beijing compulsory: 24 Jan–1 Mar | Shanghai: 2 Feb–27 Feb | Northern regions earlier"
+    },
+    {
+      "Start Date": "15 Feb 2026",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "Spring Festival Holiday (Day 1 of 9)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "CNY eve; CNY Day 1=17 Feb. Makeup workdays: 14 Feb (Sat), 28 Feb (Sat)"
+    },
+    {
+      "Start Date": "16 Feb 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Spring Festival Holiday Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "17 Feb 2026",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "Spring Festival / Chinese New Year Day 1",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "18 Feb 2026",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Spring Festival Holiday Day 4",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "19 Feb 2026",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "Spring Festival Holiday Day 5",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "20 Feb 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Spring Festival Holiday Day 6",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "21 Feb 2026",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Spring Festival Holiday Day 7",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "22 Feb 2026",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "Spring Festival Holiday Day 8",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "23 Feb 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Spring Festival Holiday Day 9",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "4 Apr 2026",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Qingming Festival",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Holiday: 4-6 Apr"
+    },
+    {
+      "Start Date": "5 Apr 2026",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "Qingming Festival Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "6 Apr 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Qingming Festival Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "1 May 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Labour Day / Golden Week",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Holiday: 1-5 May"
+    },
+    {
+      "Start Date": "2 May 2026",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Labour Day Holiday Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "3 May 2026",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "Labour Day Holiday Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "4 May 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Labour Day Holiday Day 4",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "5 May 2026",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "Labour Day Holiday Day 5",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "19 Jun 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Dragon Boat Festival",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Holiday: 19-21 Jun"
+    },
+    {
+      "Start Date": "20 Jun 2026",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Dragon Boat Festival Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "21 Jun 2026",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "Dragon Boat Festival Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "8 Jul 2026",
+      "End Date": "31 Aug 2026",
+      "Day": "Wed",
+      "Holiday / Break": "Summer Break 2025/26 — Beijing Local",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2025/26",
+      "Notes": "Beijing compulsory: 8 Jul–31 Aug | Senior high from 15 Jul"
+    },
+    {
+      "Start Date": "17 Aug 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Intl Schools Start (~17 Aug)",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "Dulwich/BSB/ISB/WAB start mid-to-late August"
+    },
+    {
+      "Start Date": "25 Sep 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Mid-Autumn Festival",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Holiday: 25-27 Sep"
+    },
+    {
+      "Start Date": "26 Sep 2026",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Mid-Autumn Festival Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "27 Sep 2026",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "Mid-Autumn Festival Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "1 Oct 2026",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "National Day / Golden Week",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Holiday: 1-7 Oct"
+    },
+    {
+      "Start Date": "2 Oct 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "National Day Holiday Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "3 Oct 2026",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "National Day Holiday Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "4 Oct 2026",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "National Day Holiday Day 4",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "5 Oct 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "National Day Holiday Day 5",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "5 Oct 2026",
+      "End Date": "11 Oct 2026",
+      "Day": "Mon",
+      "Holiday / Break": "October / Fall Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "Approx 1 week; aligns with China National Day Golden Week"
+    },
+    {
+      "Start Date": "6 Oct 2026",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "National Day Holiday Day 6",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "7 Oct 2026",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "National Day Holiday Day 7",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "19 Dec 2026",
+      "End Date": "3 Jan 2027",
+      "Day": "Sat",
+      "Holiday / Break": "Christmas / Winter Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "Approx 2 weeks; varies by school"
+    },
+    {
+      "Start Date": "1 Jan 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "New Year's Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Holiday: 1-3 Jan 2027 (provisional)"
+    },
+    {
+      "Start Date": "2 Jan 2027",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "New Year Holiday Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "3 Jan 2027",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "New Year Holiday Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "20 Jan 2027",
+      "End Date": "28 Feb 2027",
+      "Day": "Wed",
+      "Holiday / Break": "Winter Break 2026/27 — Beijing Local",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026/27",
+      "Notes": "Provisional — set by Beijing Municipal Education Commission; aligns with CNY (6 Feb 2027)"
+    },
+    {
+      "Start Date": "6 Feb 2027",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Spring Festival / Chinese New Year Day 1",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Holiday approx 6-12 Feb 2027 (provisional)"
+    },
+    {
+      "Start Date": "6 Feb 2027",
+      "End Date": "14 Feb 2027",
+      "Day": "Sat",
+      "Holiday / Break": "Chinese New Year Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "Around CNY (6 Feb 2027); typically 1-2 weeks"
+    },
+    {
+      "Start Date": "7 Feb 2027",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "Spring Festival Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "8 Feb 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Spring Festival Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "9 Feb 2027",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "Spring Festival Day 4",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "10 Feb 2027",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Spring Festival Day 5",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "11 Feb 2027",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "Spring Festival Day 6",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "12 Feb 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Spring Festival Day 7",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "27 Mar 2027",
+      "End Date": "5 Apr 2027",
+      "Day": "Sat",
+      "Holiday / Break": "Spring / Easter Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "Around Easter (26 Mar 2027); approx 1-2 weeks"
+    },
+    {
+      "Start Date": "3 Apr 2027",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Qingming Festival",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Approx 3-5 Apr 2027 (provisional)"
+    },
+    {
+      "Start Date": "4 Apr 2027",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "Qingming Festival Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "5 Apr 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Qingming Festival Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "1 May 2027",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Labour Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Approx 1-5 May 2027 (provisional)"
+    },
+    {
+      "Start Date": "2 May 2027",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "Labour Day Holiday Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "3 May 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Labour Day Holiday Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "4 May 2027",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "Labour Day Holiday Day 4",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "5 May 2027",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Labour Day Holiday Day 5",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "9 Jun 2027",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Dragon Boat Festival",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Approx 9-11 Jun 2027 (provisional)"
+    },
+    {
+      "Start Date": "10 Jun 2027",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "Dragon Boat Festival Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "11 Jun 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Dragon Boat Festival Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "15 Jun 2027",
+      "End Date": "16 Aug 2027",
+      "Day": "Tue",
+      "Holiday / Break": "Summer Holidays",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "Typically Jun-Aug; British schools end Jun, US schools end May/Jun"
+    },
+    {
+      "Start Date": "8 Jul 2027",
+      "End Date": "31 Aug 2027",
+      "Day": "Thu",
+      "Holiday / Break": "Summer Break 2026/27 — Beijing Local",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026/27",
+      "Notes": "Provisional — typically Jul 8–Aug 31 for compulsory schools"
+    },
+    {
+      "Start Date": "27 Sep 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Mid-Autumn Festival",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Approx 27-29 Sep 2027 (provisional)"
+    },
+    {
+      "Start Date": "28 Sep 2027",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "Mid-Autumn Festival Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "29 Sep 2027",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Mid-Autumn Festival Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "1 Oct 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "National Day / Golden Week",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "1-7 Oct 2027 (provisional)"
+    },
+    {
+      "Start Date": "2 Oct 2027",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "National Day Holiday Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "3 Oct 2027",
+      "End Date": "",
+      "Day": "Sun",
+      "Holiday / Break": "National Day Holiday Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "4 Oct 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "National Day Holiday Day 4",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "5 Oct 2027",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "National Day Holiday Day 5",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "6 Oct 2027",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "National Day Holiday Day 6",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "7 Oct 2027",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "National Day Holiday Day 7",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    }
+  ]
+}

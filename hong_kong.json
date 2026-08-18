@@ -1,0 +1,475 @@
+{
+  "sheet": "Hong Kong",
+  "headers": [
+    "Start Date",
+    "End Date",
+    "Day",
+    "Holiday / Break",
+    "Type",
+    "System / Source",
+    "Acad. Year",
+    "Notes"
+  ],
+  "rows": [
+    {
+      "Start Date": "1 Jan 2026",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "New Year's Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "17 Feb 2026",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "Lunar New Year Day 1",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "18 Feb 2026",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Lunar New Year Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "19 Feb 2026",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "Lunar New Year Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "3 Apr 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Good Friday",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "4 Apr 2026",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Easter Saturday",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "6 Apr 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Easter Monday",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "7 Apr 2026",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "Ching Ming Festival (substitute)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Ching Ming=5 Apr (Sun); sub falls Tue as Mon=Easter"
+    },
+    {
+      "Start Date": "1 May 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Labour Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "27 May 2026",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Buddha's Birthday",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Approx — 4th lunar month 8th day"
+    },
+    {
+      "Start Date": "19 Jun 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Dragon Boat Festival (Tuen Ng)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "1 Jul 2026",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "HKSAR Establishment Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "11 Aug 2026",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "Intl Schools Start (from 11 Aug)",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": ""
+    },
+    {
+      "Start Date": "2 Sep 2026",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Term 1 Starts (local schools)",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026/27",
+      "Notes": ""
+    },
+    {
+      "Start Date": "28 Sep 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Day following Mid-Autumn Festival",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Mid-Autumn=26 Sep (Sat), day after=27 Sep (Sun), sub=28 Sep (Mon)"
+    },
+    {
+      "Start Date": "1 Oct 2026",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "National Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "17 Oct 2026",
+      "End Date": "26 Oct 2026",
+      "Day": "Sat",
+      "Holiday / Break": "October Mid-Term Break",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026/27",
+      "Notes": ""
+    },
+    {
+      "Start Date": "17 Oct 2026",
+      "End Date": "26 Oct 2026",
+      "Day": "Sat",
+      "Holiday / Break": "October Half-Term",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ESF: 17-26 Oct | AIS: 17-25 Oct | ASHK: 16-25 Oct"
+    },
+    {
+      "Start Date": "19 Oct 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Chung Yeung Festival",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "12 Dec 2026",
+      "End Date": "4 Jan 2027",
+      "Day": "Sat",
+      "Holiday / Break": "Christmas / Winter Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ESF/CIS: 12 Dec–3 Jan | AIS: 18 Dec–4 Jan | ASHK: 19 Dec–4 Jan"
+    },
+    {
+      "Start Date": "21 Dec 2026",
+      "End Date": "3 Jan 2027",
+      "Day": "Mon",
+      "Holiday / Break": "Christmas & New Year Break",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026/27",
+      "Notes": ""
+    },
+    {
+      "Start Date": "25 Dec 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Christmas Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "28 Dec 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "First Weekday after Christmas",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Boxing Day 26 Dec=Sat; first weekday after=Mon 28 Dec"
+    },
+    {
+      "Start Date": "1 Jan 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "New Year's Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "5 Feb 2027",
+      "End Date": "15 Feb 2027",
+      "Day": "Fri",
+      "Holiday / Break": "Chinese New Year Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ESF/ASHK: 5-15 Feb | AIS: 5-14 Feb | CIS: ends ~15 Feb"
+    },
+    {
+      "Start Date": "6 Feb 2027",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Lunar New Year Day 1",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "6 Feb 2027",
+      "End Date": "16 Feb 2027",
+      "Day": "Sat",
+      "Holiday / Break": "Chinese New Year Break",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026/27",
+      "Notes": "Around CNY Day 1 (6 Feb)"
+    },
+    {
+      "Start Date": "8 Feb 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Lunar New Year Day 3",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "9 Feb 2027",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "Lunar New Year Day 4 (substitute)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "LNY Day 2=7 Feb (Sun); Day 4 designated as sub"
+    },
+    {
+      "Start Date": "26 Mar 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Good Friday",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "26 Mar 2027",
+      "End Date": "9 Apr 2027",
+      "Day": "Fri",
+      "Holiday / Break": "Easter Break",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026/27",
+      "Notes": ""
+    },
+    {
+      "Start Date": "26 Mar 2027",
+      "End Date": "11 Apr 2027",
+      "Day": "Fri",
+      "Holiday / Break": "Spring / Easter Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ESF: 26 Mar–11 Apr | AIS: 26 Mar–5 Apr | ASHK: 26 Mar–6 Apr"
+    },
+    {
+      "Start Date": "27 Mar 2027",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Easter Saturday",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "29 Mar 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Easter Monday",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "5 Apr 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Ching Ming Festival",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "3 May 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Labour Day (substitute)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "1 May=Sat; substitute Mon 3 May"
+    },
+    {
+      "Start Date": "13 May 2027",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "Buddha's Birthday",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "9 Jun 2027",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Dragon Boat Festival (Tuen Ng)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "16 Jun 2027",
+      "End Date": "10 Aug 2027",
+      "Day": "Wed",
+      "Holiday / Break": "Summer Holidays",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ESF ends 25 Jun | AIS ends 16 Jun | ASHK ends 17 Jun"
+    },
+    {
+      "Start Date": "25 Jun 2027",
+      "End Date": "31 Aug 2027",
+      "Day": "Fri",
+      "Holiday / Break": "Summer Holidays",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026/27",
+      "Notes": ""
+    },
+    {
+      "Start Date": "1 Jul 2027",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "HKSAR Establishment Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "28 Sep 2027",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "Day following Mid-Autumn Festival",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Approx — subject to HK Government gazette"
+    },
+    {
+      "Start Date": "1 Oct 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "National Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "21 Oct 2027",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "Chung Yeung Festival",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "27 Dec 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Christmas Day (substitute)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "25 Dec=Sat; sub Mon 27 Dec"
+    },
+    {
+      "Start Date": "28 Dec 2027",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "First Weekday after Christmas",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "26 Dec=Sun; sub Tue 28 Dec"
+    }
+  ]
+}

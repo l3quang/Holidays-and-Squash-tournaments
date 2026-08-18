@@ -1,0 +1,385 @@
+{
+  "sheet": "Singapore",
+  "headers": [
+    "Start Date",
+    "End Date",
+    "Day",
+    "Holiday / Break",
+    "Type",
+    "System / Source",
+    "Acad. Year",
+    "Notes"
+  ],
+  "rows": [
+    {
+      "Start Date": "1 Jan 2026",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "New Year's Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "2 Jan 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "MOE School Year Starts",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "17 Feb 2026",
+      "End Date": "",
+      "Day": "Tue",
+      "Holiday / Break": "Chinese New Year Day 1",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "18 Feb 2026",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Chinese New Year Day 2",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "19 Mar 2026",
+      "End Date": "3 Apr 2026",
+      "Day": "Thu",
+      "Holiday / Break": "Term 1 School Holidays",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026",
+      "Notes": "Approx dates — confirm with MOE"
+    },
+    {
+      "Start Date": "20 Mar 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Hari Raya Puasa",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Subject to moon-sighting confirmation"
+    },
+    {
+      "Start Date": "3 Apr 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Good Friday",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "1 May 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Labour Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "27 May 2026",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Hari Raya Haji",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "Subject to moon-sighting confirmation"
+    },
+    {
+      "Start Date": "30 May 2026",
+      "End Date": "28 Jun 2026",
+      "Day": "Sat",
+      "Holiday / Break": "June / Mid-Year Holidays",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026",
+      "Notes": "Longest mid-year break"
+    },
+    {
+      "Start Date": "1 Jun 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Vesak Day (substitute)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "31 May=Sun; sub Mon 1 Jun"
+    },
+    {
+      "Start Date": "10 Aug 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "National Day (substitute)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "9 Aug=Sun; sub Mon 10 Aug"
+    },
+    {
+      "Start Date": "10 Aug 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Intl Schools Start (from ~10 Aug)",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": ""
+    },
+    {
+      "Start Date": "21 Sep 2026",
+      "End Date": "2 Oct 2026",
+      "Day": "Mon",
+      "Holiday / Break": "Term 3 School Holidays",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "12 Oct 2026",
+      "End Date": "16 Oct 2026",
+      "Day": "Mon",
+      "Holiday / Break": "October Half-Term / Fall Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "Typical 1-week break — varies by school"
+    },
+    {
+      "Start Date": "9 Nov 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Deepavali (substitute)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": "8 Nov=Sun; sub Mon 9 Nov"
+    },
+    {
+      "Start Date": "21 Nov 2026",
+      "End Date": "1 Jan 2027",
+      "Day": "Sat",
+      "Holiday / Break": "Year-End Holidays",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2026",
+      "Notes": "School year ends ~20 Nov; overlaps Christmas & New Year"
+    },
+    {
+      "Start Date": "12 Dec 2026",
+      "End Date": "4 Jan 2027",
+      "Day": "Sat",
+      "Holiday / Break": "Christmas / Winter Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "Approx 3 weeks; varies by school"
+    },
+    {
+      "Start Date": "25 Dec 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Christmas Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2026",
+      "Notes": ""
+    },
+    {
+      "Start Date": "1 Jan 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "New Year's Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "4 Jan 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "MOE School Year Starts",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "6 Feb 2027",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Chinese New Year Day 1",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "8 Feb 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Chinese New Year Day 2 (substitute)",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "7 Feb=Sun; sub Mon 8 Feb"
+    },
+    {
+      "Start Date": "13 Feb 2027",
+      "End Date": "21 Feb 2027",
+      "Day": "Sat",
+      "Holiday / Break": "Chinese New Year Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "Approx 1 week around CNY (6 Feb 2027)"
+    },
+    {
+      "Start Date": "10 Mar 2027",
+      "End Date": "",
+      "Day": "Wed",
+      "Holiday / Break": "Hari Raya Puasa",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Subject to moon-sighting confirmation"
+    },
+    {
+      "Start Date": "13 Mar 2027",
+      "End Date": "21 Mar 2027",
+      "Day": "Sat",
+      "Holiday / Break": "Term 1 School Holidays (March)",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "26 Mar 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "Good Friday",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "26 Mar 2027",
+      "End Date": "9 Apr 2027",
+      "Day": "Fri",
+      "Holiday / Break": "Easter / Spring Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "Approx 2 weeks — varies by school"
+    },
+    {
+      "Start Date": "1 May 2027",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Labour Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Falls on Saturday — no automatic substitute"
+    },
+    {
+      "Start Date": "17 May 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "Hari Raya Haji",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Subject to moon-sighting confirmation"
+    },
+    {
+      "Start Date": "20 May 2027",
+      "End Date": "",
+      "Day": "Thu",
+      "Holiday / Break": "Vesak Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "29 May 2027",
+      "End Date": "27 Jun 2027",
+      "Day": "Sat",
+      "Holiday / Break": "June / Mid-Year Holidays",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "14 Jun 2027",
+      "End Date": "8 Aug 2027",
+      "Day": "Mon",
+      "Holiday / Break": "Summer Holidays",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "Approx Jun-Aug; varies by school"
+    },
+    {
+      "Start Date": "9 Aug 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "National Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "4 Sep 2027",
+      "End Date": "12 Sep 2027",
+      "Day": "Sat",
+      "Holiday / Break": "Term 3 School Holidays (September)",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2027",
+      "Notes": ""
+    },
+    {
+      "Start Date": "20 Nov 2027",
+      "End Date": "31 Dec 2027",
+      "Day": "Sat",
+      "Holiday / Break": "Year-End Holidays",
+      "Type": "School Break - Local/State",
+      "System / Source": "Local/State",
+      "Acad. Year": "2027",
+      "Notes": "Provisional — MOE to confirm exact end date"
+    },
+    {
+      "Start Date": "25 Dec 2027",
+      "End Date": "",
+      "Day": "Sat",
+      "Holiday / Break": "Christmas Day",
+      "Type": "Public Holiday",
+      "System / Source": "National",
+      "Acad. Year": "2027",
+      "Notes": "Falls on Saturday — no automatic substitute"
+    }
+  ]
+}
