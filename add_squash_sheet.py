@@ -36,10 +36,10 @@ DARK_TEXT_LEVELS = {"World Championship", "Asian Championship"}
 def ds(d): return d.strftime("%d %b %Y").lstrip("0")
 def wd(d): return d.strftime("%a")
 
-def ev(start, end, name, organiser, venue, country, level, age_groups, notes="", confirmed=True):
+def ev(start, end, name, organiser, venue, country, level, age_groups, notes="", confirmed=True, deadline=""):
     return dict(start=start, end=end, name=name, organiser=organiser,
                 venue=venue, country=country, level=level,
-                age_groups=age_groups, notes=notes, confirmed=confirmed)
+                age_groups=age_groups, notes=notes, confirmed=confirmed, deadline=deadline)
 
 # ── Events — sorted by start date ─────────────────────────────────────────────
 # ★ = confirmed from ASF website directly; others from ESF/WSF/BJO/US Squash
@@ -396,10 +396,10 @@ EVENTS = [
 # ── Build / replace sheet ─────────────────────────────────────────────────────
 COLS = [
     "Start Date", "End Date", "Day", "Tournament / Event",
-    "Level / Status", "Confirmed?", "Organiser", "Venue", "Country",
+    "Level / Status", "Confirmed?", "Entry Deadline", "Organiser", "Venue", "Country",
     "Age Groups", "Notes / Source"
 ]
-WIDTHS = [13, 13, 6, 46, 20, 13, 34, 42, 16, 28, 60]
+WIDTHS = [13, 13, 6, 46, 20, 13, 16, 34, 42, 16, 28, 60]
 
 def hdr_cell(ws, row, col, text, fill=HDR):
     c = ws.cell(row=row, column=col, value=text)
@@ -409,7 +409,7 @@ def body_cell(ws, row, col, value, fill, font, align=LFT):
     c = ws.cell(row=row, column=col, value=value)
     c.fill = fill; c.font = font; c.alignment = align; c.border = BRD
 
-PATH = r"D:\Work\claude\QL\holiday\Holiday_Calendar_2026_2027.xlsx"
+PATH = r"D:\Work\claude\QL\holiday\Holidays and Squash tournaments\Holiday_Calendar_2026_2027.xlsx"
 wb = openpyxl.load_workbook(PATH)
 
 if "Squash Junior Events" in wb.sheetnames:
@@ -453,6 +453,7 @@ for row_i, e in enumerate(events_sorted, start=3):
         "Tournament / Event": e["name"],
         "Level / Status":     e["level"],
         "Confirmed?":         "✓ Confirmed" if is_confirmed else "~ Estimated",
+        "Entry Deadline":     e.get("deadline", ""),
         "Organiser":          e["organiser"],
         "Venue":              e["venue"],
         "Country":            e["country"],
@@ -460,7 +461,7 @@ for row_i, e in enumerate(events_sorted, start=3):
         "Notes / Source":     e["notes"],
     }
     for col_i, col in enumerate(COLS, 1):
-        align = CTR if col in ("Start Date", "End Date", "Day", "Confirmed?") else LFT
+        align = CTR if col in ("Start Date", "End Date", "Day", "Confirmed?", "Entry Deadline") else LFT
         body_cell(ws, row_i, col_i, vals[col], fill, font, align)
 
 # AutoFilter

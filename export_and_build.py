@@ -283,7 +283,7 @@ const mainEl = document.getElementById('mainContent');
 
 TABS.forEach((tab, i) => {{
   const btn = document.createElement('button');
-  btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
+  btn.className = 'tab-btn' + (tab.id === 'squash' ? ' active' : '');
   btn.textContent = tab.label;
   btn.dataset.tabId = tab.id;
   btn.addEventListener('click', () => activateTab(tab.id));
@@ -295,7 +295,7 @@ TABS.forEach((tab, i) => {{
   const sheet = DATA[tab.id];
   if (!sheet) return;
   const panel = document.createElement('div');
-  panel.className = 'panel' + (i === 0 ? ' active' : '');
+  panel.className = 'panel' + (tab.id === 'squash' ? ' active' : '');
   panel.id = 'panel-' + tab.id;
   panel.innerHTML = buildPanel(tab, sheet);
   mainEl.appendChild(panel);
@@ -319,6 +319,9 @@ function buildPanel(tab, sheet) {{
     <div class="toolbar">
       <input type="text" placeholder="Search…" data-search>
       ${{filterHTML}}
+      <select data-month-filter title="Filter by Month">
+        <option value="">All Months</option>
+      </select>
       <span class="row-count" data-rowcount></span>
     </div>
     ${{tab.id === 'squash' ? buildLegend() : ''}}
@@ -352,14 +355,21 @@ function getFilterFields(tab, sheet) {{
   return fields.filter(f => sheet.headers.includes(f.key));
 }}
 
-function initPanel(tab, sheet, panel) {{
-  const tbody   = panel.querySelector('[data-tbody]');
-  const search  = panel.querySelector('[data-search]');
-  const selects = panel.querySelectorAll('[data-filter]');
-  const rcEl    = panel.querySelector('[data-rowcount]');
-  const ths     = panel.querySelectorAll('thead th');
+// ── Month helper ─────────────────────────────────────────────────────────────
+function parseMonth(dateStr) {{
+  const m = (dateStr || '').match(/\\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\\b/i);
+  return m ? m[1][0].toUpperCase() + m[1].slice(1).toLowerCase() : '';
+}}
 
-  // Populate select options
+function initPanel(tab, sheet, panel) {{
+  const tbody    = panel.querySelector('[data-tbody]');
+  const search   = panel.querySelector('[data-search]');
+  const selects  = panel.querySelectorAll('[data-filter]');
+  const monthSel = panel.querySelector('[data-month-filter]');
+  const rcEl     = panel.querySelector('[data-rowcount]');
+  const ths      = panel.querySelectorAll('thead th');
+
+  // Populate field selects
   selects.forEach(sel => {{
     const key = sel.dataset.filter;
     const vals = [...new Set(sheet.rows.map(r => r[key] || '').filter(Boolean))].sort();
@@ -370,6 +380,15 @@ function initPanel(tab, sheet, panel) {{
     }});
   }});
 
+  // Populate month select in calendar order
+  const MONTH_ORDER = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const monthsInData = new Set(sheet.rows.map(r => parseMonth(r['Start Date'] || '')).filter(Boolean));
+  MONTH_ORDER.filter(m => monthsInData.has(m)).forEach(m => {{
+    const opt = document.createElement('option');
+    opt.value = m; opt.textContent = m;
+    monthSel.appendChild(opt);
+  }});
+
   let sortCol = -1, sortAsc = true;
   let rows = [...sheet.rows];
 
@@ -377,16 +396,18 @@ function initPanel(tab, sheet, panel) {{
     const q = (search?.value || '').toLowerCase();
     const filters = {{}};
     selects.forEach(s => {{ if (s.value) filters[s.dataset.filter] = s.value; }});
-    return {{q, filters}};
+    const month = monthSel ? monthSel.value : '';
+    return {{q, filters, month}};
   }}
 
   function render() {{
-    const {{q, filters}} = getFilters();
+    const {{q, filters, month}} = getFilters();
     let visible = rows.filter(row => {{
       if (q && !Object.values(row).some(v => v.toLowerCase().includes(q))) return false;
       for (const [k, v] of Object.entries(filters)) {{
         if (row[k] !== v) return false;
       }}
+      if (month && parseMonth(row['Start Date'] || '') !== month) return false;
       return true;
     }});
 
@@ -433,6 +454,7 @@ function initPanel(tab, sheet, panel) {{
 
   search?.addEventListener('input', render);
   selects.forEach(s => s.addEventListener('change', render));
+  monthSel?.addEventListener('change', render);
 
   render();
 }}
