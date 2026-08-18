@@ -215,6 +215,35 @@ HK_SCHOOL_INTL = [
        notes="ESF ends 25 Jun | AIS ends 16 Jun | ASHK ends 17 Jun", acad_year="2026/27"),
 ]
 
+HK_SCHOOL_ISF = [
+    # ISF Academy (弘立書院) — Academic Calendar 2026-27
+    # Source: ISF-Academic-Calendar-2026-27.pdf (last updated 12 Jun 2026)
+    sb("Hong Kong", date(2026, 10, 12), date(2026, 10, 16),
+       "ISF Mid-Term Break", "ISF Academy",
+       notes="ISF Academy (弘立). Source: ISF Academic Calendar 2026-27", acad_year="2026/27"),
+    sb("Hong Kong", date(2026, 11, 16), date(2026, 11, 16),
+       "ISF Professional Learning Day 1", "ISF Academy",
+       notes="ISF PL Day #1 — no school for students. Source: ISF Academic Calendar 2026-27", acad_year="2026/27"),
+    sb("Hong Kong", date(2026, 12, 21), date(2027,  1,  1),
+       "ISF Winter Break", "ISF Academy",
+       notes="ISF Academy. Incl. Christmas Day 25 Dec, Boxing Day 26 Dec, New Year's Day 1 Jan. School resumes 4 Jan 2027. Source: ISF Academic Calendar 2026-27", acad_year="2026/27"),
+    sb("Hong Kong", date(2027,  2,  1), date(2027,  2, 12),
+       "ISF Lunar New Year Break", "ISF Academy",
+       notes="ISF Academy. Incl. LNY Day 1 (6 Feb), Day 3 (8 Feb), Day 4 (9 Feb). School resumes 15 Feb (PL Day). Source: ISF Academic Calendar 2026-27", acad_year="2026/27"),
+    sb("Hong Kong", date(2027,  2, 15), date(2027,  2, 15),
+       "ISF Professional Learning Day 2", "ISF Academy",
+       notes="ISF PL Day #2 — no school for students. Source: ISF Academic Calendar 2026-27", acad_year="2026/27"),
+    sb("Hong Kong", date(2027,  3, 30), date(2027,  4,  2),
+       "ISF Spring Break", "ISF Academy",
+       notes="ISF Academy. Note: also off for Good Friday 26 Mar, Day after GF 27 Mar, Easter Monday 29 Mar (HK public hols). Source: ISF Academic Calendar 2026-27", acad_year="2026/27"),
+    sb("Hong Kong", date(2027,  5, 14), date(2027,  5, 14),
+       "ISF Professional Learning Day 3", "ISF Academy",
+       notes="ISF PL Day #3 — no school for students. Source: ISF Academic Calendar 2026-27", acad_year="2026/27"),
+    sb("Hong Kong", date(2027,  6, 12), date(2027,  7, 31),
+       "ISF Summer Holidays", "ISF Academy",
+       notes="ISF Academy. Last day of school: 11 Jun 2027. Summer Extension Programme 14-25 Jun. HKSAR Establishment Day 1 Jul. Source: ISF Academic Calendar 2026-27", acad_year="2026/27"),
+]
+
 # ══════════════════════════════════════════════════════════════════════════════
 # SINGAPORE
 # ══════════════════════════════════════════════════════════════════════════════
@@ -693,12 +722,12 @@ wb.remove(wb.active)  # remove default sheet
 build_master(wb, ALL_DATA)
 build_uk_sheet(wb)
 build_us_sheet(wb)
-build_country_sheet(wb, "Hong Kong", HK_PH, [HK_SCHOOL_LOCAL, HK_SCHOOL_INTL], "Hong Kong")
+build_country_sheet(wb, "Hong Kong", HK_PH, [HK_SCHOOL_LOCAL, HK_SCHOOL_INTL, HK_SCHOOL_ISF], "Hong Kong")
 build_country_sheet(wb, "Singapore",  SG_PH, [SG_SCHOOL_MOE,  SG_SCHOOL_INTL],  "Singapore")
 build_country_sheet(wb, "China",      CN_PH, [CN_SCHOOL_LOCAL, CN_SCHOOL_INTL],  "China")
 build_legend(wb)
 
-out = r"D:\Work\claude\QL\holiday\Holiday_Calendar_2026_2027.xlsx"
+out = r"D:\Work\claude\QL\holiday\Holidays and Squash tournaments\Holiday_Calendar_2026_2027.xlsx"
 wb.save(out)
 print(f"Saved: {out}")
 

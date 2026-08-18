@@ -63,7 +63,9 @@ TYPE_COLORS = {
     "Public Holiday":               "#DDEEFF",
     "School Break - Local/State":   "#D6EED6",
     "School Break - International": "#E6F4E6",
+    "School Break - ISF Academy":   "#E8D5F5",
 }
+ISF_COLOR = "#E8D5F5"
 SQUASH_COLORS = {
     "World Championship": {"bg": "#7B3F9E", "text": "#fff"},
     "Asian Championship": {"bg": "#CC0000", "text": "#fff"},
@@ -172,6 +174,33 @@ html = f"""<!DOCTYPE html>
     padding:7px 10px; border:1px solid var(--border); border-radius:var(--radius);
     font-size:13px; font-family:inherit; background:#fff; cursor:pointer;
   }}
+
+  /* ── Multi-select dropdown ── */
+  .ms-wrap {{ position:relative; }}
+  .ms-btn {{
+    padding:7px 10px; border:1px solid var(--border); border-radius:var(--radius);
+    font-size:13px; font-family:inherit; background:#fff; cursor:pointer;
+    white-space:nowrap; min-width:110px; text-align:left; line-height:1.4;
+  }}
+  .ms-btn:hover {{ border-color:var(--blue); }}
+  .ms-panel {{
+    display:none; position:absolute; top:calc(100% + 3px); left:0; z-index:200;
+    background:#fff; border:1px solid var(--border); border-radius:var(--radius);
+    box-shadow:var(--shadow); min-width:210px; max-height:260px; overflow-y:auto;
+  }}
+  .ms-wrap.open .ms-panel {{ display:block; }}
+  .ms-option {{
+    display:flex; align-items:center; gap:8px; padding:6px 12px;
+    cursor:pointer; font-size:12.5px; user-select:none;
+  }}
+  .ms-option:hover {{ background:#f0f4f8; }}
+  .ms-option input[type=checkbox] {{ cursor:pointer; accent-color:var(--blue); flex-shrink:0; }}
+  .ms-divider {{ border:none; border-top:1px solid #E8EEF6; margin:2px 0; }}
+  .isf-swatch {{
+    display:inline-block; width:10px; height:10px; border-radius:2px;
+    background:#E8D5F5; border:1px solid rgba(0,0,0,.15); vertical-align:middle; margin-right:3px;
+  }}
+
   .row-count {{
     margin-left:auto; font-size:12px; color:var(--muted);
     white-space:nowrap;
@@ -253,9 +282,13 @@ const TABS  = {tabs_meta_js};
 const CTRY_COLORS   = {country_colors_js};
 const TYPE_COLORS   = {type_colors_js};
 const SQUASH_COLORS = {squash_colors_js};
+const ISF_COLOR     = {jstr(ISF_COLOR)};
 const MONTH_NAMES   = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
 // ── Colour helpers ────────────────────────────────────────────────────────────
+function isISF(row) {{
+  return (row['Type'] || '').includes('ISF') || (row['System / Source'] || '') === 'ISF Academy';
+}}
 function rowStyle(tab, row) {{
   if (tab.scheme === 'squash') {{
     const est = (row['Confirmed?'] || '').includes('Estimated');
@@ -263,9 +296,9 @@ function rowStyle(tab, row) {{
     const c   = SQUASH_COLORS[lvl] || SQUASH_COLORS['National/Regional'];
     return `background:${{c.bg}};color:${{c.text}}`;
   }}
+  if (isISF(row)) return `background:${{ISF_COLOR}}`;
   if (tab.scheme === 'country') {{
     const country = row['Country'] || '';
-    // Reference check: UK 2025/26
     if (country === 'UK' && (row['Acad. Year'] || '') === '2025/26')
       return 'background:#F2F2F2';
     const bg = CTRY_COLORS[country] || '#fff';
@@ -311,10 +344,10 @@ function buildPanel(tab, sheet) {{
   ).join('');
 
   const filterFields = getFilterFields(tab, sheet);
-  const filterHTML   = filterFields.map(f =>
-    `<select data-filter="${{esc(f.key)}}" title="Filter by ${{esc(f.label)}}">
-       <option value="">All ${{esc(f.label)}}s</option>
-     </select>`
+  const filterHTML = filterFields.map(f =>
+    `<div class="ms-wrap" data-ms-key="${{esc(f.key)}}">` +
+    `<button class="ms-btn" type="button">All ${{esc(f.label)}}s ▾</button>` +
+    `<div class="ms-panel"></div></div>`
   ).join('');
 
   return `
@@ -368,24 +401,75 @@ function parseMonthYear(dateStr) {{
   return {{label: MONTH_NAMES[mi] + ' ' + yr, key: yr * 12 + mi}};
 }}
 
+function msBtnLabel(btn, pnl, label) {{
+  const cbs = [...pnl.querySelectorAll('input.ms-cb')];
+  const checked = cbs.filter(c => c.checked);
+  if (!checked.length || checked.length === cbs.length)
+    btn.textContent = 'All ' + label + 's ▾';
+  else if (checked.length === 1)
+    btn.textContent = checked[0].value + ' ▾';
+  else
+    btn.textContent = checked.length + ' selected ▾';
+}}
+
 function initPanel(tab, sheet, panel) {{
   const tbody    = panel.querySelector('[data-tbody]');
   const search   = panel.querySelector('[data-search]');
-  const selects  = panel.querySelectorAll('[data-filter]');
+  const msWraps  = panel.querySelectorAll('[data-ms-key]');
   const monthSel = panel.querySelector('[data-month-filter]');
   const rcEl     = panel.querySelector('[data-rowcount]');
   const ths      = panel.querySelectorAll('thead th');
 
-  // Populate field selects
-  selects.forEach(sel => {{
-    const key = sel.dataset.filter;
-    const vals = [...new Set(sheet.rows.map(r => r[key] || '').filter(Boolean))].sort();
+  // Populate multi-select dropdowns
+  msWraps.forEach(wrap => {{
+    const key   = wrap.dataset.msKey;
+    const btn   = wrap.querySelector('.ms-btn');
+    const pnl   = wrap.querySelector('.ms-panel');
+    const label = btn.textContent.replace(/^All | ▾.*$/g, '').trim()
+                    .replace(/s$/, '');
+    const vals  = [...new Set(sheet.rows.map(r => r[key] || '').filter(Boolean))].sort();
+
+    // "All" row
+    const allDiv = document.createElement('div');
+    allDiv.className = 'ms-option';
+    const allCb = document.createElement('input');
+    allCb.type = 'checkbox'; allCb.checked = true; allCb.dataset.all = '1';
+    allDiv.append(allCb, Object.assign(document.createElement('span'), {{textContent: 'All'}}));
+    pnl.appendChild(allDiv);
+    const hr = document.createElement('hr'); hr.className = 'ms-divider';
+    pnl.appendChild(hr);
+
     vals.forEach(v => {{
-      const opt = document.createElement('option');
-      opt.value = v; opt.textContent = v;
-      sel.appendChild(opt);
+      const div = document.createElement('div'); div.className = 'ms-option';
+      const cb  = document.createElement('input');
+      cb.type = 'checkbox'; cb.value = v; cb.checked = true; cb.className = 'ms-cb';
+      const span = document.createElement('span');
+      // Add ISF swatch for ISF Academy option
+      if (v === 'School Break - ISF Academy') {{
+        const sw = document.createElement('span'); sw.className = 'isf-swatch';
+        span.append(sw);
+      }}
+      span.append(document.createTextNode(v));
+      div.append(cb, span);
+      pnl.appendChild(div);
+    }});
+
+    btn.addEventListener('click', e => {{ e.stopPropagation(); wrap.classList.toggle('open'); }});
+    pnl.addEventListener('change', e => {{
+      const cb = e.target;
+      if (cb.dataset.all) {{
+        pnl.querySelectorAll('input.ms-cb').forEach(c => c.checked = cb.checked);
+      }} else {{
+        allCb.checked = [...pnl.querySelectorAll('input.ms-cb')].every(c => c.checked);
+      }}
+      msBtnLabel(btn, pnl, label);
+      render();
     }});
   }});
+
+  // Close dropdowns on outside click
+  document.addEventListener('click', () =>
+    panel.querySelectorAll('.ms-wrap.open').forEach(w => w.classList.remove('open')));
 
   // Populate month-year select in chronological order
   const seen = new Map();
@@ -405,7 +489,12 @@ function initPanel(tab, sheet, panel) {{
   function getFilters() {{
     const q = (search?.value || '').toLowerCase();
     const filters = {{}};
-    selects.forEach(s => {{ if (s.value) filters[s.dataset.filter] = s.value; }});
+    msWraps.forEach(wrap => {{
+      const key  = wrap.dataset.msKey;
+      const cbs  = [...wrap.querySelectorAll('input.ms-cb')];
+      const chk  = cbs.filter(c => c.checked).map(c => c.value);
+      if (chk.length < cbs.length) filters[key] = chk;
+    }});
     const fromKey = monthSel && monthSel.value ? parseInt(monthSel.value, 10) : null;
     return {{q, filters, fromKey}};
   }}
@@ -414,8 +503,8 @@ function initPanel(tab, sheet, panel) {{
     const {{q, filters, fromKey}} = getFilters();
     let visible = rows.filter(row => {{
       if (q && !Object.values(row).some(v => v.toLowerCase().includes(q))) return false;
-      for (const [k, v] of Object.entries(filters)) {{
-        if (row[k] !== v) return false;
+      for (const [k, allowed] of Object.entries(filters)) {{
+        if (!allowed.includes(row[k])) return false;
       }}
       if (fromKey !== null) {{
         const my = parseMonthYear(row['Start Date'] || '');
@@ -424,7 +513,6 @@ function initPanel(tab, sheet, panel) {{
       return true;
     }});
 
-    // Sort
     if (sortCol >= 0) {{
       const key = sheet.headers[sortCol];
       visible.sort((a, b) => {{
@@ -442,7 +530,7 @@ function initPanel(tab, sheet, panel) {{
 
     tbody.innerHTML = visible.map(row => {{
       const style = rowStyle(tab, row);
-      const tds = sheet.headers.map((h, ci) => {{
+      const tds = sheet.headers.map(h => {{
         let val = esc(row[h] || '');
         if (h === 'Confirmed?') {{
           const cls = val.includes('Confirmed') ? 'confirmed-yes' : 'confirmed-no';
@@ -455,7 +543,6 @@ function initPanel(tab, sheet, panel) {{
     }}).join('');
   }}
 
-  // Sort on header click
   ths.forEach((th, ci) => {{
     th.addEventListener('click', () => {{
       if (sortCol === ci) sortAsc = !sortAsc; else {{ sortCol = ci; sortAsc = true; }}
@@ -466,7 +553,6 @@ function initPanel(tab, sheet, panel) {{
   }});
 
   search?.addEventListener('input', render);
-  selects.forEach(s => s.addEventListener('change', render));
   monthSel?.addEventListener('change', render);
 
   render();

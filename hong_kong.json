@@ -172,6 +172,16 @@
       "Notes": ""
     },
     {
+      "Start Date": "12 Oct 2026",
+      "End Date": "16 Oct 2026",
+      "Day": "Mon",
+      "Holiday / Break": "ISF Mid-Term Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF Academy (弘立). Source: ISF Academic Calendar 2026-27"
+    },
+    {
       "Start Date": "17 Oct 2026",
       "End Date": "26 Oct 2026",
       "Day": "Sat",
@@ -202,6 +212,16 @@
       "Notes": ""
     },
     {
+      "Start Date": "16 Nov 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "ISF Professional Learning Day 1",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF PL Day #1 — no school for students. Source: ISF Academic Calendar 2026-27"
+    },
+    {
       "Start Date": "12 Dec 2026",
       "End Date": "4 Jan 2027",
       "Day": "Sat",
@@ -220,6 +240,16 @@
       "System / Source": "Local/State",
       "Acad. Year": "2026/27",
       "Notes": ""
+    },
+    {
+      "Start Date": "21 Dec 2026",
+      "End Date": "1 Jan 2027",
+      "Day": "Mon",
+      "Holiday / Break": "ISF Winter Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF Academy. Incl. Christmas Day 25 Dec, Boxing Day 26 Dec, New Year's Day 1 Jan. School resumes 4 Jan 2027. Source: ISF Academic Calendar 2026-27"
     },
     {
       "Start Date": "25 Dec 2026",
@@ -250,6 +280,16 @@
       "System / Source": "National",
       "Acad. Year": "2027",
       "Notes": ""
+    },
+    {
+      "Start Date": "1 Feb 2027",
+      "End Date": "12 Feb 2027",
+      "Day": "Mon",
+      "Holiday / Break": "ISF Lunar New Year Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF Academy. Incl. LNY Day 1 (6 Feb), Day 3 (8 Feb), Day 4 (9 Feb). School resumes 15 Feb (PL Day). Source: ISF Academic Calendar 2026-27"
     },
     {
       "Start Date": "5 Feb 2027",
@@ -302,6 +342,16 @@
       "Notes": "LNY Day 2=7 Feb (Sun); Day 4 designated as sub"
     },
     {
+      "Start Date": "15 Feb 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "ISF Professional Learning Day 2",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF PL Day #2 — no school for students. Source: ISF Academic Calendar 2026-27"
+    },
+    {
       "Start Date": "26 Mar 2027",
       "End Date": "",
       "Day": "Fri",
@@ -352,6 +402,16 @@
       "Notes": ""
     },
     {
+      "Start Date": "30 Mar 2027",
+      "End Date": "2 Apr 2027",
+      "Day": "Tue",
+      "Holiday / Break": "ISF Spring Break",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF Academy. Note: also off for Good Friday 26 Mar, Day after GF 27 Mar, Easter Monday 29 Mar (HK public hols). Source: ISF Academic Calendar 2026-27"
+    },
+    {
       "Start Date": "5 Apr 2027",
       "End Date": "",
       "Day": "Mon",
@@ -382,6 +442,16 @@
       "Notes": ""
     },
     {
+      "Start Date": "14 May 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "ISF Professional Learning Day 3",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF PL Day #3 — no school for students. Source: ISF Academic Calendar 2026-27"
+    },
+    {
       "Start Date": "9 Jun 2027",
       "End Date": "",
       "Day": "Wed",
@@ -390,6 +460,16 @@
       "System / Source": "National",
       "Acad. Year": "2027",
       "Notes": ""
+    },
+    {
+      "Start Date": "12 Jun 2027",
+      "End Date": "31 Jul 2027",
+      "Day": "Sat",
+      "Holiday / Break": "ISF Summer Holidays",
+      "Type": "School Break - International",
+      "System / Source": "International",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF Academy. Last day of school: 11 Jun 2027. Summer Extension Programme 14-25 Jun. HKSAR Establishment Day 1 Jul. Source: ISF Academic Calendar 2026-27"
     },
     {
       "Start Date": "16 Jun 2027",
