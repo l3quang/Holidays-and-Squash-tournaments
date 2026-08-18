@@ -240,7 +240,7 @@ html = f"""<!DOCTYPE html>
 <body>
 
 <div class="site-header">
-  <h1>Holiday &amp; Squash Junior Calendar — 2026–2027</h1>
+  <h1>Holiday &amp; Squash Junior Calendar — 2026–2027 &nbsp;<span style="font-size:13px;font-weight:400;opacity:.85">Created for my favourite people Ari Bean Wan</span></h1>
   <p>UK · US · Hong Kong · Singapore · China · International Squash Events &nbsp;·&nbsp; Generated: {datetime.now().strftime("%d %b %Y %H:%M")}</p>
   <nav class="tab-bar" id="tabBar"></nav>
 </div>
