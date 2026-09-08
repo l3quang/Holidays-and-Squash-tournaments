@@ -207,7 +207,7 @@
 
 <div class="site-header">
   <h1>Holiday &amp; Squash Junior Calendar — 2026–2027 &nbsp;<span style="font-size:13px;font-weight:400;opacity:.85">Created for my favourite people Ari Bean Wan</span></h1>
-  <p>UK · US · Hong Kong · Singapore · China · International Squash Events &nbsp;·&nbsp; Generated: 08 Sep 2026 16:33</p>
+  <p>UK · US · Hong Kong · Singapore · China · International Squash Events &nbsp;·&nbsp; Generated: 08 Sep 2026 17:00</p>
   <nav class="tab-bar" id="tabBar"></nav>
 </div>
 
@@ -569,9 +569,10 @@ function initPanel(tab, sheet, panel) {
     const {q, filters, fromKey} = getFilters();
     let visible = rows.filter(row => {
       if (q && !Object.values(row).some(v => v.toLowerCase().includes(q))) return false;
-      // Combined tab: country filter applies to holidays only; month filter applies to all
-      const isSquashRow = tab.scheme === 'combined' && row['Category'] === 'Squash';
-      if (!isSquashRow) {
+      // Combined tab: country filter skipped for squash + ISF rows; month filter applies to all
+      const skipCountry = tab.scheme === 'combined' &&
+        (row['Category'] === 'Squash' || isISF(row));
+      if (!skipCountry) {
         for (const [k, allowed] of Object.entries(filters)) {
           if (!allowed.includes(row[k])) return false;
         }

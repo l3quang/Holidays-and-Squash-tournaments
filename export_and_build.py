@@ -718,9 +718,10 @@ function initPanel(tab, sheet, panel) {{
     const {{q, filters, fromKey}} = getFilters();
     let visible = rows.filter(row => {{
       if (q && !Object.values(row).some(v => v.toLowerCase().includes(q))) return false;
-      // Combined tab: country filter applies to holidays only; month filter applies to all
-      const isSquashRow = tab.scheme === 'combined' && row['Category'] === 'Squash';
-      if (!isSquashRow) {{
+      // Combined tab: country filter skipped for squash + ISF rows; month filter applies to all
+      const skipCountry = tab.scheme === 'combined' &&
+        (row['Category'] === 'Squash' || isISF(row));
+      if (!skipCountry) {{
         for (const [k, allowed] of Object.entries(filters)) {{
           if (!allowed.includes(row[k])) return false;
         }}
