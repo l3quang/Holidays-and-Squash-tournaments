@@ -248,6 +248,16 @@ EVENTS = [
        "AJSS Silver. Entry deadline: 23 Sep 2026 23:59 Sri Lanka Time. "
        "Source: asiansquash.org/eventpage/ajss-event"),
 
+    ev(date(2026, 10, 31), date(2026, 11, 15),
+       "Hong Kong Junior Squash Championships 2026",
+       "Squash Association of Hong Kong, China (HKSA)",
+       "Cornwall Street STTC & Hong Kong Squash Centre, Hong Kong", "Hong Kong",
+       "National/Regional", "U9/U11/U13/U15/U17/U19 (B&G)",
+       "HK Junior Ranking 3-star event. Played across 3 weekends: 31 Oct & 1 Nov (CSPSC); "
+       "7-8 Nov (CSPSC); SF/Final 14-15 Nov (HKSC). Entry deadline: 25 Sep 2026. "
+       "Source: hksquash.org.hk/public/tournaments/overview/id/391.html",
+       deadline="25 Sep 2026"),
+
     ev(date(2026, 11, 13), date(2026, 11, 15),
        "US Mid-Atlantic JCT 2026",
        "US Squash", "Washington, D.C.", "USA",

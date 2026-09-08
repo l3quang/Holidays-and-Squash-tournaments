@@ -628,6 +628,11 @@ function initPanel(tab, sheet, panel) {{
     opt.value = key; opt.textContent = 'From ' + label;
     monthSel.appendChild(opt);
   }});
+  // Default to current month (or nearest future month available)
+  const nowKey = new Date().getFullYear() * 12 + new Date().getMonth();
+  const opts = [...monthSel.options].filter(o => o.value !== '');
+  const match = opts.find(o => parseInt(o.value) >= nowKey);
+  if (match) monthSel.value = match.value;
 
   let sortCol = -1, sortAsc = true;
   let rows = [...sheet.rows];
