@@ -498,7 +498,7 @@ function buildLegend() {{
 function getFilterFields(tab, sheet) {{
   const fields = [];
   if (tab.scheme === 'combined')
-    fields.push({{key:'Category', label:'Category'}}, {{key:'Country', label:'Country'}}, {{key:'Type / Level', label:'Level / Type'}});
+    fields.push({{key:'Country', label:'Holiday Country'}});
   else if (tab.scheme === 'country')
     fields.push({{key:'Country', label:'Country'}}, {{key:'Type', label:'Type'}}, {{key:'Acad. Year', label:'Year'}});
   else if (tab.scheme === 'squash')
@@ -716,12 +716,16 @@ function initPanel(tab, sheet, panel) {{
     const {{q, filters, fromKey}} = getFilters();
     let visible = rows.filter(row => {{
       if (q && !Object.values(row).some(v => v.toLowerCase().includes(q))) return false;
-      for (const [k, allowed] of Object.entries(filters)) {{
-        if (!allowed.includes(row[k])) return false;
-      }}
-      if (fromKey !== null) {{
-        const my = parseMonthYear(row['Start Date'] || '');
-        if (!my || my.key < fromKey) return false;
+      // Combined tab: squash rows always shown; holidays filtered by country + month
+      const isSquashRow = tab.scheme === 'combined' && row['Category'] === 'Squash';
+      if (!isSquashRow) {{
+        for (const [k, allowed] of Object.entries(filters)) {{
+          if (!allowed.includes(row[k])) return false;
+        }}
+        if (fromKey !== null) {{
+          const my = parseMonthYear(row['Start Date'] || '');
+          if (!my || my.key < fromKey) return false;
+        }}
       }}
       return true;
     }});
