@@ -46,6 +46,56 @@ for sheet_name in wb.sheetnames:
     print(f"  Written: {fname.name}  ({len(rows)} rows)")
     all_data[sheet_name] = {"headers": headers, "rows": rows}
 
+# ── Build combined (holidays + squash) virtual sheet ──────────────────────────
+def _parse_date_py(s):
+    try:
+        p = s.split()
+        m = {'Jan':1,'Feb':2,'Mar':3,'Apr':4,'May':5,'Jun':6,
+             'Jul':7,'Aug':8,'Sep':9,'Oct':10,'Nov':11,'Dec':12}
+        from datetime import date as _d
+        return _d(int(p[2]), m[p[1]], int(p[0]))
+    except Exception:
+        from datetime import date as _d
+        return _d(9999, 1, 1)
+
+_COMBINED_HEADERS = ["Start Date","End Date","Country","Name","Category",
+                     "Type / Level","System / Source","Notes"]
+_combined_rows = []
+for _r in all_data.get("Master Calendar", {}).get("rows", []):
+    if not _r.get("Start Date"):
+        continue
+    _combined_rows.append({
+        "Start Date":      _r.get("Start Date",""),
+        "End Date":        _r.get("End Date",""),
+        "Country":         _r.get("Country",""),
+        "Name":            _r.get("Holiday / Break",""),
+        "Category":        "Holiday",
+        "Type / Level":    _r.get("Type",""),
+        "System / Source": _r.get("System / Source",""),
+        "Notes":           _r.get("Notes",""),
+        "Type":            _r.get("Type",""),
+        "Level / Status":  "",
+        "Confirmed?":      "",
+    })
+for _r in all_data.get("Squash Junior Events", {}).get("rows", []):
+    if not _r.get("Start Date"):
+        continue
+    _combined_rows.append({
+        "Start Date":      _r.get("Start Date",""),
+        "End Date":        _r.get("End Date",""),
+        "Country":         _r.get("Country",""),
+        "Name":            _r.get("Tournament / Event",""),
+        "Category":        "Squash",
+        "Type / Level":    _r.get("Level / Status",""),
+        "System / Source": _r.get("Organiser",""),
+        "Notes":           _r.get("Notes / Source",""),
+        "Type":            "",
+        "Level / Status":  _r.get("Level / Status",""),
+        "Confirmed?":      _r.get("Confirmed?",""),
+    })
+_combined_rows.sort(key=lambda r: _parse_date_py(r["Start Date"]))
+all_data["_combined"] = {"headers": _COMBINED_HEADERS, "rows": _combined_rows}
+
 # ── 2. Build HTML ──────────────────────────────────────────────────────────────
 
 # Color maps
@@ -80,6 +130,7 @@ SQUASH_COLORS = {
 
 # Tab configs: id, label, sheet name, color scheme type, filter fields
 TABS = [
+    {"id": "combined",  "label": "All Events",          "sheet": "_combined",          "scheme": "combined"},
     {"id": "master",    "label": "All Holidays",        "sheet": "Master Calendar",    "scheme": "country"},
     {"id": "uk",        "label": "UK",                  "sheet": "UK",                 "scheme": "type",    "color": "#D6E4F7"},
     {"id": "us",        "label": "US",                  "sheet": "US",                 "scheme": "type",    "color": "#FFF2CC"},
@@ -341,6 +392,15 @@ function rowStyle(tab, row) {{
     return `background:${{c.bg}};color:${{c.text}}`;
   }}
   if (isISF(row)) return `background:${{ISF_COLOR}}`;
+  if (tab.scheme === 'combined') {{
+    if ((row['Category'] || '') === 'Squash') {{
+      const lvl = (row['Confirmed?']||'').includes('Estimated') ? 'Estimated' : (row['Level / Status'] || 'National/Regional');
+      const c = SQUASH_COLORS[lvl] || SQUASH_COLORS['National/Regional'];
+      return `background:${{c.bg}};color:${{c.text}}`;
+    }}
+    const t = row['Type'] || '';
+    return `background:${{TYPE_COLORS[t] || '#fff'}}`;
+  }}
   if (tab.scheme === 'country') {{
     const country = row['Country'] || '';
     if (country === 'UK' && (row['Acad. Year'] || '') === '2025/26')
@@ -407,7 +467,7 @@ function buildPanel(tab, sheet) {{
         <button class="view-btn" data-view="calendar">Calendar</button>
       </div>
     </div>
-    ${{tab.id === 'squash' ? buildLegend() : ''}}
+    ${{(tab.id === 'squash' || tab.id === 'combined') ? buildLegend() : ''}}
     <div class="tbl-wrap">
       <table>
         <thead><tr>${{thHTML}}</tr></thead>
@@ -437,7 +497,9 @@ function buildLegend() {{
 
 function getFilterFields(tab, sheet) {{
   const fields = [];
-  if (tab.scheme === 'country')
+  if (tab.scheme === 'combined')
+    fields.push({{key:'Category', label:'Category'}}, {{key:'Country', label:'Country'}}, {{key:'Type / Level', label:'Level / Type'}});
+  else if (tab.scheme === 'country')
     fields.push({{key:'Country', label:'Country'}}, {{key:'Type', label:'Type'}}, {{key:'Acad. Year', label:'Year'}});
   else if (tab.scheme === 'squash')
     fields.push({{key:'Level / Status', label:'Level'}}, {{key:'Country', label:'Country'}}, {{key:'Confirmed?', label:'Confirmed'}});
@@ -520,7 +582,7 @@ function renderCalGrid(visible, tab, yr, mo, bodyEl) {{
 
     const pills = shown.map(row => {{
       const st   = rowStyle(tab, row);
-      const name = esc(row['Event'] || row['Holiday / Event'] || row['Name'] || Object.values(row).find(v => v) || '');
+      const name = esc(row['Name'] || row['Tournament / Event'] || row['Holiday / Break'] || Object.values(row).find(v => v) || '');
       return `<span class="cal-ev" style="${{st}}" title="${{name}}">${{name}}</span>`;
     }}).join('');
     const moreDiv = more > 0 ? `<div class="cal-more">+${{more}} more</div>` : '';

@@ -120,6 +120,25 @@ EVENTS = [
        "Gold", "U11/U13/U15/U17/U19 (B&G)",
        "AJSS Gold. Source: asiansquash.org/eventpage/ajss-event"),
 
+    ev(date(2026,  6, 10), date(2026,  6, 14),
+       "4th Southeast Asian Junior Individual Championships 2026",
+       "Squash Philippines / ASF", "Manila, Philippines", "Philippines",
+       "Silver", "U19 (B&G)",
+       "AJSS Silver. SEA Junior Individual Champs. "
+       "Source: ASF handbook / asiansquash.org"),
+
+    ev(date(2026,  6, 11), date(2026,  6, 14),
+       "Italian Junior Open 2026",
+       "ESF / Italian Squash Federation", "Riccione (RN), Italy", "Italy",
+       "Silver", "U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Silver. Source: europeansquash.com/event/italian-junior-open-2026"),
+
+    ev(date(2026,  6, 19), date(2026,  6, 21),
+       "Portuguese Junior Open 2026",
+       "ESF / Portuguese Squash Federation", "Proracket Squash & Padel, Porto, Portugal", "Portugal",
+       "Silver", "U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Silver. Source: europeansquash.com/event/portuguese-junior-open-2026"),
+
     ev(date(2026,  6, 22), date(2026,  6, 27),
        "Eastern Slam 2026 ★",
        "India Squash / ASF", "India (East)", "India",
@@ -219,6 +238,19 @@ EVENTS = [
        "AJSS Gold. Entry deadline: 29 Jul 2026 12:00 Macau Time. "
        "Source: asiansquash.org/eventpage/ajss-event"),
 
+    ev(date(2026,  9,  4), date(2026,  9,  6),
+       "Welsh Junior Open 2026",
+       "ESF / Squash Wales", "Sport Wales National Centre, Cardiff", "Wales",
+       "Silver", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Silver. Entry deadline was 14 Aug 2026. "
+       "Source: europeansquash.com / scottishsquash.org"),
+
+    ev(date(2026,  9, 18), date(2026,  9, 20),
+       "Slovak Junior Open 2026",
+       "ESF / Slovak Squash Federation", "Bratislava, Slovakia", "Slovakia",
+       "Bronze", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Bronze. Source: europeansquash.com/event/slovak-junior-open-2026"),
+
     ev(date(2026,  9, 19), date(2026,  9, 24),
        "Indian Junior Open 2026 ★",
        "Squash Rackets Federation of India / ASF", "Kolkata, India", "India",
@@ -240,6 +272,14 @@ EVENTS = [
        "Diamond", "U11/U13/U15/U17/U19 (B&G)",
        "AJSS Diamond — highest AJSS tier. Entry deadline: 14 Sep 2026 5pm Malaysian Time. "
        "Source: asiansquash.org/eventpage/ajss-event"),
+
+    ev(date(2026, 10, 22), date(2026, 10, 25),
+       "French Junior Open 2026",
+       "ESF / French Squash Federation", "France (venue TBC)", "France",
+       "Gold", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Gold. Venue not yet confirmed. "
+       "Source: europeansquash.com/event/french-junior-open-2026",
+       confirmed=False),
 
     ev(date(2026, 10, 24), date(2026, 10, 28),
        "Colombo Junior Squash Open 2026 ★",
@@ -279,6 +319,14 @@ EVENTS = [
        "AJSS Platinum. Entry deadline: 1 Nov 2026. "
        "Source: asiansquash.org/eventpage/ajss-event"),
 
+    ev(date(2026, 11, 28), date(2026, 11, 30),
+       "Malta Junior Open 2026",
+       "ESF / Malta Squash", "National Squash Centre, Malta", "Malta",
+       "Bronze", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Bronze. Entry deadline: 20 Nov 2026 (exact event dates estimated). "
+       "Source: europeansquash.com/event/malta-junior-open-2026",
+       confirmed=False),
+
     ev(date(2026, 12, 19), date(2026, 12, 23),
        "US Junior Open 2026",
        "US Squash", "Philadelphia, PA", "USA",
@@ -293,6 +341,13 @@ EVENTS = [
        "AJSS Platinum. NOT YET listed on ASF page — dates estimated from prior years "
        "(2025 edition: 19-24 Dec 2025). Check hksquash.org.hk for official announcement.",
        confirmed=False),
+
+    ev(date(2026, 12, 28), date(2026, 12, 30),
+       "Scottish Junior Open 2026",
+       "ESF / Scottish Squash", "Oriam & Edinburgh Sports Club, Edinburgh", "Scotland",
+       "Silver", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Silver. Lead-in event to British Junior Open 2027. "
+       "Source: scottishsquash.org / europeansquash.com"),
 
     # ═══════════════ 2027 ════════════════════════════════════════════════════
 
