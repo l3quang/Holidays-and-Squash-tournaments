@@ -398,8 +398,7 @@ function rowStyle(tab, row) {{
       const c = SQUASH_COLORS[lvl] || SQUASH_COLORS['National/Regional'];
       return `background:${{c.bg}};color:${{c.text}}`;
     }}
-    const t = row['Type'] || '';
-    return `background:${{TYPE_COLORS[t] || '#fff'}}`;
+    return 'background:#D0D0D0;color:#333';
   }}
   if (tab.scheme === 'country') {{
     const country = row['Country'] || '';
@@ -635,7 +634,10 @@ function initPanel(tab, sheet, panel) {{
     const pnl   = wrap.querySelector('.ms-panel');
     const label = btn.textContent.replace(/^All | ▾.*$/g, '').trim()
                     .replace(/s$/, '');
-    const vals  = [...new Set(sheet.rows.map(r => r[key] || '').filter(Boolean))].sort();
+    const srcRows = (tab.scheme === 'combined' && key === 'Country')
+      ? sheet.rows.filter(r => r['Category'] === 'Holiday')
+      : sheet.rows;
+    const vals  = [...new Set(srcRows.map(r => r[key] || '').filter(Boolean))].sort();
 
     // "All" row
     const allDiv = document.createElement('div');
@@ -716,16 +718,16 @@ function initPanel(tab, sheet, panel) {{
     const {{q, filters, fromKey}} = getFilters();
     let visible = rows.filter(row => {{
       if (q && !Object.values(row).some(v => v.toLowerCase().includes(q))) return false;
-      // Combined tab: squash rows always shown; holidays filtered by country + month
+      // Combined tab: country filter applies to holidays only; month filter applies to all
       const isSquashRow = tab.scheme === 'combined' && row['Category'] === 'Squash';
       if (!isSquashRow) {{
         for (const [k, allowed] of Object.entries(filters)) {{
           if (!allowed.includes(row[k])) return false;
         }}
-        if (fromKey !== null) {{
-          const my = parseMonthYear(row['Start Date'] || '');
-          if (!my || my.key < fromKey) return false;
-        }}
+      }}
+      if (fromKey !== null) {{
+        const my = parseMonthYear(row['Start Date'] || '');
+        if (!my || my.key < fromKey) return false;
       }}
       return true;
     }});
