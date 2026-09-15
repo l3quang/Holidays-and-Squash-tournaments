@@ -275,11 +275,11 @@ EVENTS = [
 
     ev(date(2026, 10, 22), date(2026, 10, 25),
        "French Junior Open 2026",
-       "ESF / French Squash Federation", "France (venue TBC)", "France",
+       "ESF / French Squash Federation", "Wambrechies, France", "France",
        "Gold", "U11/U13/U15/U17/U19 (B&G)",
-       "ESF Junior Circuit Gold. Venue not yet confirmed. "
-       "Source: europeansquash.com/event/french-junior-open-2026",
-       confirmed=False),
+       "ESF Junior Circuit Gold. Entry deadline: 21 Sep 2026. "
+       "Venue: P.A. du Chat, 75 rue Pierre et Marie Curie, 59118 Wambrechies. "
+       "Source: europeansquash.com/event/french-junior-open-2026"),
 
     ev(date(2026, 10, 24), date(2026, 10, 28),
        "Colombo Junior Squash Open 2026 ★",
@@ -455,6 +455,75 @@ EVENTS = [
        "World Squash Federation (WSF)", "Karachi, Pakistan", "Pakistan",
        "World Championship", "U23 (B&G)",
        "WSF global event for under-23 players. Source: worldsquash.sport"),
+
+    # ── Sep 2026 audit additions (ESF + Squash Canada) ───────────────────────
+
+    ev(date(2026,  8,  5), date(2026,  8,  9),
+       "Egyptian Junior Open 2026",
+       "ESF / Egyptian Squash Federation", "Cairo, Egypt", "Egypt",
+       "Gold", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Gold. Source: europeansquash.com/event/egyptian-junior-open-2026"),
+
+    ev(date(2026,  8,  7), date(2026,  8,  9),
+       "Finnish Junior Open 2026",
+       "ESF / Finnish Squash Federation", "Talihalli, Helsinki, Finland", "Finland",
+       "Bronze", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Bronze. Source: europeansquash.com/event/finnish-junior-open-2026"),
+
+    ev(date(2026,  8, 14), date(2026,  8, 16),
+       "Turkish Junior Open 2026",
+       "ESF / Turkish Squash Federation", "Istanbul, Turkey", "Turkey",
+       "Bronze", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Bronze. Source: europeansquash.com/event/turkish-junior-open-2026",
+       confirmed=False),
+
+    ev(date(2026,  9, 24), date(2026,  9, 27),
+       "Danish Junior Open 2026",
+       "ESF / Danish Squash Federation", "Herlev, Copenhagen, Denmark", "Denmark",
+       "Gold", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Gold. Source: europeansquash.com/event/danish-junior-open-2026"),
+
+    ev(date(2026, 10,  9), date(2026, 10, 11),
+       "Hungarian Junior Open 2026",
+       "ESF / Hungarian Squash Federation", "Budapest, Hungary", "Hungary",
+       "Bronze", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Bronze. Source: europeansquash.com/event/hungarian-junior-open-2026",
+       confirmed=False),
+
+    ev(date(2026, 10, 16), date(2026, 10, 18),
+       "Romanian Junior Open 2026",
+       "ESF / Romanian Squash Federation", "Bucharest, Romania", "Romania",
+       "Bronze", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Bronze. Source: europeansquash.com/event/romanian-junior-open-2026",
+       confirmed=False),
+
+    ev(date(2026, 10, 23), date(2026, 10, 25),
+       "Lithuanian Junior Open 2026",
+       "ESF / Lithuanian Squash Federation", "Kaunas, Lithuania", "Lithuania",
+       "Bronze", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Bronze. Source: europeansquash.com/event/lithuanian-junior-open-2026",
+       confirmed=False),
+
+    ev(date(2026, 11,  5), date(2026, 11,  8),
+       "Polish Junior Open 2026",
+       "ESF / Polish Squash Federation", "Kraków, Poland", "Poland",
+       "Bronze", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Bronze. Source: europeansquash.com/event/polish-junior-open-2026",
+       confirmed=False),
+
+    ev(date(2026, 11, 13), date(2026, 11, 15),
+       "Irish Junior Open 2026",
+       "ESF / Squash Ireland", "Dublin, Ireland", "Ireland",
+       "Silver", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Silver. Source: europeansquash.com/event/irish-junior-open-2026",
+       confirmed=False),
+
+    ev(date(2026, 12, 12), date(2026, 12, 15),
+       "Canadian Junior Open 2026",
+       "Squash Canada", "White Oaks Resort & Spa, Niagara-on-the-Lake, Canada", "Canada",
+       "Platinum", "U11/U13/U15/U17/U19 (B&G)",
+       "30th anniversary edition. National top-tier event. Confirmed dates. "
+       "Source: squash.ca/2026/06/2026-canadian-junior-open-dates-confirmed"),
 
 ]
 
