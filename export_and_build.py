@@ -76,6 +76,7 @@ for _r in all_data.get("Master Calendar", {}).get("rows", []):
         "Type":            _r.get("Type",""),
         "Level / Status":  "",
         "Confirmed?":      "",
+        "School":          _r.get("System / Source","") if _r.get("Type","").startswith("School Break") else "",
     })
 for _r in all_data.get("Squash Junior Events", {}).get("rows", []):
     if not _r.get("Start Date"):
@@ -92,6 +93,7 @@ for _r in all_data.get("Squash Junior Events", {}).get("rows", []):
         "Type":            "",
         "Level / Status":  _r.get("Level / Status",""),
         "Confirmed?":      _r.get("Confirmed?",""),
+        "School":          "",
     })
 _combined_rows.sort(key=lambda r: _parse_date_py(r["Start Date"]))
 all_data["_combined"] = {"headers": _COMBINED_HEADERS, "rows": _combined_rows}
@@ -114,8 +116,10 @@ TYPE_COLORS = {
     "School Break - Local/State":   "#D6EED6",
     "School Break - International": "#E6F4E6",
     "School Break - ISF Academy":   "#E8D5F5",
+    "School Break - GSIS":          "#D5EEF5",
 }
-ISF_COLOR = "#E8D5F5"
+ISF_COLOR  = "#E8D5F5"
+GSIS_COLOR = "#D5EEF5"
 SQUASH_COLORS = {
     "World Championship": {"bg": "#7B3F9E", "text": "#fff"},
     "Asian Championship": {"bg": "#CC0000", "text": "#fff"},
@@ -378,11 +382,15 @@ const CTRY_COLORS   = {country_colors_js};
 const TYPE_COLORS   = {type_colors_js};
 const SQUASH_COLORS = {squash_colors_js};
 const ISF_COLOR     = {jstr(ISF_COLOR)};
+const GSIS_COLOR    = {jstr(GSIS_COLOR)};
 const MONTH_NAMES   = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
 // ── Colour helpers ────────────────────────────────────────────────────────────
 function isISF(row) {{
   return (row['Type'] || '').includes('ISF') || (row['System / Source'] || '') === 'ISF Academy';
+}}
+function isGSIS(row) {{
+  return (row['Type'] || '').includes('GSIS') || (row['System / Source'] || '') === 'GSIS';
 }}
 function rowStyle(tab, row) {{
   if (tab.scheme === 'squash') {{
@@ -392,6 +400,7 @@ function rowStyle(tab, row) {{
     return `background:${{c.bg}};color:${{c.text}}`;
   }}
   if (isISF(row)) return `background:${{ISF_COLOR}}`;
+  if (isGSIS(row)) return `background:${{GSIS_COLOR}}`;
   if (tab.scheme === 'combined') {{
     if ((row['Category'] || '') === 'Squash') {{
       const lvl = (row['Confirmed?']||'').includes('Estimated') ? 'Estimated' : (row['Level / Status'] || 'National/Regional');
@@ -497,7 +506,7 @@ function buildLegend() {{
 function getFilterFields(tab, sheet) {{
   const fields = [];
   if (tab.scheme === 'combined')
-    fields.push({{key:'Country', label:'Holiday Country'}});
+    return [{{key:'Country', label:'Holiday Country'}}, {{key:'School', label:'School'}}];
   else if (tab.scheme === 'country')
     fields.push({{key:'Country', label:'Country'}}, {{key:'Type', label:'Type'}}, {{key:'Acad. Year', label:'Year'}});
   else if (tab.scheme === 'squash')
@@ -634,7 +643,7 @@ function initPanel(tab, sheet, panel) {{
     const pnl   = wrap.querySelector('.ms-panel');
     const label = btn.textContent.replace(/^All | ▾.*$/g, '').trim()
                     .replace(/s$/, '');
-    const srcRows = (tab.scheme === 'combined' && key === 'Country')
+    const srcRows = (tab.scheme === 'combined' && (key === 'Country' || key === 'School'))
       ? sheet.rows.filter(r => r['Category'] === 'Holiday')
       : sheet.rows;
     const vals  = [...new Set(srcRows.map(r => r[key] || '').filter(Boolean))].sort();
@@ -718,11 +727,10 @@ function initPanel(tab, sheet, panel) {{
     const {{q, filters, fromKey}} = getFilters();
     let visible = rows.filter(row => {{
       if (q && !Object.values(row).some(v => v.toLowerCase().includes(q))) return false;
-      // Combined tab: country filter skipped for squash + ISF rows; month filter applies to all
-      const skipCountry = tab.scheme === 'combined' &&
-        (row['Category'] === 'Squash' || isISF(row));
-      if (!skipCountry) {{
+      const isSquashRow = tab.scheme === 'combined' && row['Category'] === 'Squash';
+      if (!isSquashRow) {{
         for (const [k, allowed] of Object.entries(filters)) {{
+          if (tab.scheme === 'combined' && k === 'School' && !(row['School'] || '')) continue;
           if (!allowed.includes(row[k])) return false;
         }}
       }}

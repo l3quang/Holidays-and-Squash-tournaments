@@ -172,6 +172,16 @@
       "Notes": ""
     },
     {
+      "Start Date": "2 Oct 2026",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "GSIS CPD Day 1",
+      "Type": "School Break - GSIS",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "1st CPD Day — no regular classes for students. Source: GSIS School Calendar 2026-27 (tentative)"
+    },
+    {
       "Start Date": "12 Oct 2026",
       "End Date": "16 Oct 2026",
       "Day": "Mon",
@@ -180,6 +190,16 @@
       "System / Source": "ISF Academy",
       "Acad. Year": "2026/27",
       "Notes": "ISF Academy (弘立). Source: ISF Academic Calendar 2026-27"
+    },
+    {
+      "Start Date": "12 Oct 2026",
+      "End Date": "16 Oct 2026",
+      "Day": "Mon",
+      "Holiday / Break": "GSIS Discovery Week",
+      "Type": "School Break - GSIS",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Discovery Week — no regular classes; off-curriculum learning activities. Source: GSIS School Calendar 2026-27 (tentative)"
     },
     {
       "Start Date": "17 Oct 2026",
@@ -200,6 +220,16 @@
       "System / Source": "International",
       "Acad. Year": "2026/27",
       "Notes": "ESF: 17-26 Oct | AIS: 17-25 Oct | ASHK: 16-25 Oct"
+    },
+    {
+      "Start Date": "17 Oct 2026",
+      "End Date": "23 Oct 2026",
+      "Day": "Sat",
+      "Holiday / Break": "GSIS Autumn Break",
+      "Type": "School Break - GSIS",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Herbstferien. Incl. Chung Yeung Festival 18 Oct & Holiday 19 Oct. Source: GSIS School Calendar 2026-27 (tentative)"
     },
     {
       "Start Date": "19 Oct 2026",
@@ -230,6 +260,16 @@
       "System / Source": "International",
       "Acad. Year": "2026/27",
       "Notes": "ESF/CIS: 12 Dec–3 Jan | AIS: 18 Dec–4 Jan | ASHK: 19 Dec–4 Jan"
+    },
+    {
+      "Start Date": "14 Dec 2026",
+      "End Date": "4 Jan 2027",
+      "Day": "Mon",
+      "Holiday / Break": "GSIS Christmas Holidays",
+      "Type": "School Break - GSIS",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Weihnachtsferien. Incl. Christmas Day 25 Dec, Boxing Day 26 Dec, New Year's Day 1 Jan. Source: GSIS School Calendar 2026-27 (tentative)"
     },
     {
       "Start Date": "21 Dec 2026",
@@ -342,6 +382,16 @@
       "Notes": "LNY Day 2=7 Feb (Sun); Day 4 designated as sub"
     },
     {
+      "Start Date": "10 Feb 2027",
+      "End Date": "12 Feb 2027",
+      "Day": "Wed",
+      "Holiday / Break": "GSIS CNY School Holiday",
+      "Type": "School Break - GSIS",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Chinese New Year school holiday extension beyond public holidays (6-9 Feb). Source: GSIS School Calendar 2026-27 (tentative)"
+    },
+    {
       "Start Date": "15 Feb 2027",
       "End Date": "",
       "Day": "Mon",
@@ -380,6 +430,16 @@
       "System / Source": "International",
       "Acad. Year": "2026/27",
       "Notes": "ESF: 26 Mar–11 Apr | AIS: 26 Mar–5 Apr | ASHK: 26 Mar–6 Apr"
+    },
+    {
+      "Start Date": "26 Mar 2027",
+      "End Date": "9 Apr 2027",
+      "Day": "Fri",
+      "Holiday / Break": "GSIS Easter Holidays",
+      "Type": "School Break - GSIS",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Osterferien. Incl. Good Friday 26 Mar, Easter Monday 29 Mar, Ching Ming Festival 5 Apr. Source: GSIS School Calendar 2026-27 (tentative)"
     },
     {
       "Start Date": "27 Mar 2027",
@@ -490,6 +550,16 @@
       "System / Source": "Local/State",
       "Acad. Year": "2026/27",
       "Notes": ""
+    },
+    {
+      "Start Date": "25 Jun 2027",
+      "End Date": "15 Aug 2027",
+      "Day": "Fri",
+      "Holiday / Break": "GSIS Summer Holidays",
+      "Type": "School Break - GSIS",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Sommerferien. Last school day approx. 24 Jun 2027. Source: GSIS School Calendar 2026-27 (tentative)"
     },
     {
       "Start Date": "1 Jul 2027",

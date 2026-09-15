@@ -244,6 +244,32 @@ HK_SCHOOL_ISF = [
        notes="ISF Academy. Last day of school: 11 Jun 2027. Summer Extension Programme 14-25 Jun. HKSAR Establishment Day 1 Jul. Source: ISF Academic Calendar 2026-27", acad_year="2026/27"),
 ]
 
+HK_SCHOOL_GSIS = [
+    # German Swiss International School (德瑞國際學校) — School Calendar 2026-27
+    # Source: GSIS-School-Calendar2026-2027.pdf — dates are tentative and subject to change
+    sb("Hong Kong", date(2026, 10,  2), date(2026, 10,  2),
+       "GSIS CPD Day 1", "GSIS",
+       notes="1st CPD Day — no regular classes for students. Source: GSIS School Calendar 2026-27 (tentative)", acad_year="2026/27"),
+    sb("Hong Kong", date(2026, 10, 12), date(2026, 10, 16),
+       "GSIS Discovery Week", "GSIS",
+       notes="Discovery Week — no regular classes; off-curriculum learning activities. Source: GSIS School Calendar 2026-27 (tentative)", acad_year="2026/27"),
+    sb("Hong Kong", date(2026, 10, 17), date(2026, 10, 23),
+       "GSIS Autumn Break", "GSIS",
+       notes="Herbstferien. Incl. Chung Yeung Festival 18 Oct & Holiday 19 Oct. Source: GSIS School Calendar 2026-27 (tentative)", acad_year="2026/27"),
+    sb("Hong Kong", date(2026, 12, 14), date(2027,  1,  4),
+       "GSIS Christmas Holidays", "GSIS",
+       notes="Weihnachtsferien. Incl. Christmas Day 25 Dec, Boxing Day 26 Dec, New Year's Day 1 Jan. Source: GSIS School Calendar 2026-27 (tentative)", acad_year="2026/27"),
+    sb("Hong Kong", date(2027,  2, 10), date(2027,  2, 12),
+       "GSIS CNY School Holiday", "GSIS",
+       notes="Chinese New Year school holiday extension beyond public holidays (6-9 Feb). Source: GSIS School Calendar 2026-27 (tentative)", acad_year="2026/27"),
+    sb("Hong Kong", date(2027,  3, 26), date(2027,  4,  9),
+       "GSIS Easter Holidays", "GSIS",
+       notes="Osterferien. Incl. Good Friday 26 Mar, Easter Monday 29 Mar, Ching Ming Festival 5 Apr. Source: GSIS School Calendar 2026-27 (tentative)", acad_year="2026/27"),
+    sb("Hong Kong", date(2027,  6, 25), date(2027,  8, 15),
+       "GSIS Summer Holidays", "GSIS",
+       notes="Sommerferien. Last school day approx. 24 Jun 2027. Source: GSIS School Calendar 2026-27 (tentative)", acad_year="2026/27"),
+]
+
 # ══════════════════════════════════════════════════════════════════════════════
 # SINGAPORE
 # ══════════════════════════════════════════════════════════════════════════════
@@ -495,7 +521,7 @@ JP_PH = [
 
 ALL_DATA = (UK_PH + UK_SCHOOL +
             US_PH +
-            HK_PH + HK_SCHOOL_LOCAL + HK_SCHOOL_INTL +
+            HK_PH + HK_SCHOOL_LOCAL + HK_SCHOOL_INTL + HK_SCHOOL_ISF + HK_SCHOOL_GSIS +
             SG_PH + SG_SCHOOL_MOE + SG_SCHOOL_INTL +
             CN_PH + CN_SCHOOL_LOCAL + CN_SCHOOL_INTL +
             EU_PH + JP_PH)
@@ -722,7 +748,7 @@ wb.remove(wb.active)  # remove default sheet
 build_master(wb, ALL_DATA)
 build_uk_sheet(wb)
 build_us_sheet(wb)
-build_country_sheet(wb, "Hong Kong", HK_PH, [HK_SCHOOL_LOCAL, HK_SCHOOL_INTL, HK_SCHOOL_ISF], "Hong Kong")
+build_country_sheet(wb, "Hong Kong", HK_PH, [HK_SCHOOL_LOCAL, HK_SCHOOL_INTL, HK_SCHOOL_ISF, HK_SCHOOL_GSIS], "Hong Kong")
 build_country_sheet(wb, "Singapore",  SG_PH, [SG_SCHOOL_MOE,  SG_SCHOOL_INTL],  "Singapore")
 build_country_sheet(wb, "China",      CN_PH, [CN_SCHOOL_LOCAL, CN_SCHOOL_INTL],  "China")
 build_legend(wb)

@@ -1094,6 +1094,17 @@
       "Start Date": "2 Oct 2026",
       "End Date": "",
       "Day": "Fri",
+      "Holiday / Break": "GSIS CPD Day 1",
+      "Type": "School Break - GSIS",
+      "Country": "Hong Kong",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "1st CPD Day — no regular classes for students. Source: GSIS School Calendar 2026-27 (tentative)"
+    },
+    {
+      "Start Date": "2 Oct 2026",
+      "End Date": "",
+      "Day": "Fri",
       "Holiday / Break": "National Day Holiday Day 2",
       "Type": "Public Holiday",
       "Country": "China",
@@ -1182,6 +1193,28 @@
       "Start Date": "12 Oct 2026",
       "End Date": "16 Oct 2026",
       "Day": "Mon",
+      "Holiday / Break": "ISF Mid-Term Break",
+      "Type": "School Break - ISF Academy",
+      "Country": "Hong Kong",
+      "System / Source": "ISF Academy",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF Academy (弘立). Source: ISF Academic Calendar 2026-27"
+    },
+    {
+      "Start Date": "12 Oct 2026",
+      "End Date": "16 Oct 2026",
+      "Day": "Mon",
+      "Holiday / Break": "GSIS Discovery Week",
+      "Type": "School Break - GSIS",
+      "Country": "Hong Kong",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Discovery Week — no regular classes; off-curriculum learning activities. Source: GSIS School Calendar 2026-27 (tentative)"
+    },
+    {
+      "Start Date": "12 Oct 2026",
+      "End Date": "16 Oct 2026",
+      "Day": "Mon",
       "Holiday / Break": "October Half-Term / Fall Break",
       "Type": "School Break - International",
       "Country": "Singapore",
@@ -1221,6 +1254,17 @@
       "System / Source": "International",
       "Acad. Year": "2026/27",
       "Notes": "ESF: 17-26 Oct | AIS: 17-25 Oct | ASHK: 16-25 Oct"
+    },
+    {
+      "Start Date": "17 Oct 2026",
+      "End Date": "23 Oct 2026",
+      "Day": "Sat",
+      "Holiday / Break": "GSIS Autumn Break",
+      "Type": "School Break - GSIS",
+      "Country": "Hong Kong",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Herbstferien. Incl. Chung Yeung Festival 18 Oct & Holiday 19 Oct. Source: GSIS School Calendar 2026-27 (tentative)"
     },
     {
       "Start Date": "19 Oct 2026",
@@ -1278,6 +1322,17 @@
       "Notes": ""
     },
     {
+      "Start Date": "16 Nov 2026",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "ISF Professional Learning Day 1",
+      "Type": "School Break - ISF Academy",
+      "Country": "Hong Kong",
+      "System / Source": "ISF Academy",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF PL Day #1 — no school for students. Source: ISF Academic Calendar 2026-27"
+    },
+    {
       "Start Date": "21 Nov 2026",
       "End Date": "1 Jan 2027",
       "Day": "Sat",
@@ -1333,6 +1388,17 @@
       "Notes": "Approx 3 weeks; varies by school"
     },
     {
+      "Start Date": "14 Dec 2026",
+      "End Date": "4 Jan 2027",
+      "Day": "Mon",
+      "Holiday / Break": "GSIS Christmas Holidays",
+      "Type": "School Break - GSIS",
+      "Country": "Hong Kong",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Weihnachtsferien. Incl. Christmas Day 25 Dec, Boxing Day 26 Dec, New Year's Day 1 Jan. Source: GSIS School Calendar 2026-27 (tentative)"
+    },
+    {
       "Start Date": "18 Dec 2026",
       "End Date": "3 Jan 2027",
       "Day": "Fri",
@@ -1364,6 +1430,17 @@
       "System / Source": "Local/State",
       "Acad. Year": "2026/27",
       "Notes": ""
+    },
+    {
+      "Start Date": "21 Dec 2026",
+      "End Date": "1 Jan 2027",
+      "Day": "Mon",
+      "Holiday / Break": "ISF Winter Break",
+      "Type": "School Break - ISF Academy",
+      "Country": "Hong Kong",
+      "System / Source": "ISF Academy",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF Academy. Incl. Christmas Day 25 Dec, Boxing Day 26 Dec, New Year's Day 1 Jan. School resumes 4 Jan 2027. Source: ISF Academic Calendar 2026-27"
     },
     {
       "Start Date": "23 Dec 2026",
@@ -1608,6 +1685,17 @@
       "Notes": "Provisional — set by Beijing Municipal Education Commission; aligns with CNY (6 Feb 2027)"
     },
     {
+      "Start Date": "1 Feb 2027",
+      "End Date": "12 Feb 2027",
+      "Day": "Mon",
+      "Holiday / Break": "ISF Lunar New Year Break",
+      "Type": "School Break - ISF Academy",
+      "Country": "Hong Kong",
+      "System / Source": "ISF Academy",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF Academy. Incl. LNY Day 1 (6 Feb), Day 3 (8 Feb), Day 4 (9 Feb). School resumes 15 Feb (PL Day). Source: ISF Academic Calendar 2026-27"
+    },
+    {
       "Start Date": "5 Feb 2027",
       "End Date": "15 Feb 2027",
       "Day": "Fri",
@@ -1741,6 +1829,17 @@
     },
     {
       "Start Date": "10 Feb 2027",
+      "End Date": "12 Feb 2027",
+      "Day": "Wed",
+      "Holiday / Break": "GSIS CNY School Holiday",
+      "Type": "School Break - GSIS",
+      "Country": "Hong Kong",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Chinese New Year school holiday extension beyond public holidays (6-9 Feb). Source: GSIS School Calendar 2026-27 (tentative)"
+    },
+    {
+      "Start Date": "10 Feb 2027",
       "End Date": "",
       "Day": "Wed",
       "Holiday / Break": "Spring Festival Day 5",
@@ -1815,6 +1914,17 @@
       "System / Source": "National",
       "Acad. Year": "2027",
       "Notes": ""
+    },
+    {
+      "Start Date": "15 Feb 2027",
+      "End Date": "",
+      "Day": "Mon",
+      "Holiday / Break": "ISF Professional Learning Day 2",
+      "Type": "School Break - ISF Academy",
+      "Country": "Hong Kong",
+      "System / Source": "ISF Academy",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF PL Day #2 — no school for students. Source: ISF Academic Calendar 2026-27"
     },
     {
       "Start Date": "10 Mar 2027",
@@ -1892,6 +2002,17 @@
       "System / Source": "International",
       "Acad. Year": "2026/27",
       "Notes": "ESF: 26 Mar–11 Apr | AIS: 26 Mar–5 Apr | ASHK: 26 Mar–6 Apr"
+    },
+    {
+      "Start Date": "26 Mar 2027",
+      "End Date": "9 Apr 2027",
+      "Day": "Fri",
+      "Holiday / Break": "GSIS Easter Holidays",
+      "Type": "School Break - GSIS",
+      "Country": "Hong Kong",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Osterferien. Incl. Good Friday 26 Mar, Easter Monday 29 Mar, Ching Ming Festival 5 Apr. Source: GSIS School Calendar 2026-27 (tentative)"
     },
     {
       "Start Date": "26 Mar 2027",
@@ -1991,6 +2112,17 @@
       "System / Source": "National",
       "Acad. Year": "2027",
       "Notes": ""
+    },
+    {
+      "Start Date": "30 Mar 2027",
+      "End Date": "2 Apr 2027",
+      "Day": "Tue",
+      "Holiday / Break": "ISF Spring Break",
+      "Type": "School Break - ISF Academy",
+      "Country": "Hong Kong",
+      "System / Source": "ISF Academy",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF Academy. Note: also off for Good Friday 26 Mar, Day after GF 27 Mar, Easter Monday 29 Mar (HK public hols). Source: ISF Academic Calendar 2026-27"
     },
     {
       "Start Date": "3 Apr 2027",
@@ -2191,6 +2323,17 @@
       "Notes": ""
     },
     {
+      "Start Date": "14 May 2027",
+      "End Date": "",
+      "Day": "Fri",
+      "Holiday / Break": "ISF Professional Learning Day 3",
+      "Type": "School Break - ISF Academy",
+      "Country": "Hong Kong",
+      "System / Source": "ISF Academy",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF PL Day #3 — no school for students. Source: ISF Academic Calendar 2026-27"
+    },
+    {
       "Start Date": "17 May 2027",
       "End Date": "",
       "Day": "Mon",
@@ -2301,6 +2444,17 @@
       "Notes": ""
     },
     {
+      "Start Date": "12 Jun 2027",
+      "End Date": "31 Jul 2027",
+      "Day": "Sat",
+      "Holiday / Break": "ISF Summer Holidays",
+      "Type": "School Break - ISF Academy",
+      "Country": "Hong Kong",
+      "System / Source": "ISF Academy",
+      "Acad. Year": "2026/27",
+      "Notes": "ISF Academy. Last day of school: 11 Jun 2027. Summer Extension Programme 14-25 Jun. HKSAR Establishment Day 1 Jul. Source: ISF Academic Calendar 2026-27"
+    },
+    {
       "Start Date": "14 Jun 2027",
       "End Date": "8 Aug 2027",
       "Day": "Mon",
@@ -2354,6 +2508,17 @@
       "System / Source": "Local/State",
       "Acad. Year": "2026/27",
       "Notes": ""
+    },
+    {
+      "Start Date": "25 Jun 2027",
+      "End Date": "15 Aug 2027",
+      "Day": "Fri",
+      "Holiday / Break": "GSIS Summer Holidays",
+      "Type": "School Break - GSIS",
+      "Country": "Hong Kong",
+      "System / Source": "GSIS",
+      "Acad. Year": "2026/27",
+      "Notes": "Sommerferien. Last school day approx. 24 Jun 2027. Source: GSIS School Calendar 2026-27 (tentative)"
     },
     {
       "Start Date": "1 Jul 2027",
