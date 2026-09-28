@@ -456,7 +456,23 @@ EVENTS = [
        "World Championship", "U23 (B&G)",
        "WSF global event for under-23 players. Source: worldsquash.sport"),
 
-    # ── Sep 2026 audit additions (ESF + Squash Canada) ───────────────────────
+    # ── Sep 2026 audit additions (ESF + Squash Canada + England Squash) ──────
+
+    ev(date(2026,  9, 11), date(2026,  9, 13),
+       "Estonian Junior Open 2026",
+       "ESF / Estonian Squash Federation", "YOLO Squash, Tallinn, Estonia", "Estonia",
+       "Bronze", "U11/U13/U15/U17/U19 (B&G)",
+       "ESF Junior Circuit Bronze — inaugural edition. Estonia joins European junior calendar for first time. "
+       "Source: europeansquash.com/event/estonian-junior-open-2026"),
+
+    ev(date(2026, 10, 29), date(2026, 11,  1),
+       "Squash Travel by Nirvana British Junior Championships 2026",
+       "England Squash", "Sheffield, England", "England",
+       "National/Regional", "All junior age groups (UK players)",
+       "52nd edition. UK national junior championships — top UK talent. "
+       "Source: englandsquash.com/news/dates-announced-for-2026-british-junior-championships"),
+
+
 
     ev(date(2026,  8,  5), date(2026,  8,  9),
        "Egyptian Junior Open 2026",
