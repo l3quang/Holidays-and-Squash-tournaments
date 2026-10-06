@@ -333,13 +333,13 @@ EVENTS = [
        "Platinum", "U11/U13/U15/U17/U19 (B&G)",
        "One of the largest US junior squash events. Source: ussquash.org"),
 
-    ev(date(2026, 12, 20), date(2026, 12, 26),
+    ev(date(2026, 12, 24), date(2026, 12, 29),
        "HKFC International Junior Squash Open 2026 (est.)",
        "Squash Association of Hong Kong, China (HKSA)",
        "Hong Kong Football Club & HK Squash Centre, Hong Kong", "Hong Kong",
        "Platinum", "U9/U11/U13/U15/U17/U19 (B&G — 12 categories)",
-       "AJSS Platinum. NOT YET listed on ASF page — dates estimated from prior years "
-       "(2025 edition: 19-24 Dec 2025). Check hksquash.org.hk for official announcement.",
+       "AJSS Platinum. Verbally confirmed 24-29 Dec 2026. "
+       "Official announcement pending on hksquash.org.hk.",
        confirmed=False),
 
     ev(date(2026, 12, 28), date(2026, 12, 30),
@@ -524,8 +524,8 @@ EVENTS = [
        "Polish Junior Open 2026",
        "ESF / Polish Squash Federation", "Kraków, Poland", "Poland",
        "Bronze", "U11/U13/U15/U17/U19 (B&G)",
-       "ESF Junior Circuit Bronze. Source: europeansquash.com/event/polish-junior-open-2026",
-       confirmed=False),
+       "ESF Junior Circuit Bronze. Entry deadline: 16 Oct 2026. "
+       "Source: europeansquash.com/event/polish-junior-open-2026"),
 
     ev(date(2026, 11, 13), date(2026, 11, 15),
        "Irish Junior Open 2026",
