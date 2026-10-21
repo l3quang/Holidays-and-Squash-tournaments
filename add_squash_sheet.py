@@ -503,22 +503,22 @@ EVENTS = [
        "Hungarian Junior Open 2026",
        "ESF / Hungarian Squash Federation", "Budapest, Hungary", "Hungary",
        "Bronze", "U11/U13/U15/U17/U19 (B&G)",
-       "ESF Junior Circuit Bronze. Source: europeansquash.com/event/hungarian-junior-open-2026",
-       confirmed=False),
+       "ESF Junior Circuit Bronze. Event concluded as scheduled (City Squash Club) — "
+       "results reported on squash.hu. Source: europeansquash.com/event/hungarian-junior-open-2026"),
 
     ev(date(2026, 10, 16), date(2026, 10, 18),
        "Romanian Junior Open 2026",
        "ESF / Romanian Squash Federation", "Bucharest, Romania", "Romania",
        "Bronze", "U11/U13/U15/U17/U19 (B&G)",
-       "ESF Junior Circuit Bronze. Source: europeansquash.com/event/romanian-junior-open-2026",
-       confirmed=False),
+       "ESF Junior Circuit Bronze. Confirmed on ESF events calendar. "
+       "Source: europeansquash.com/event/romanian-junior-open-2026"),
 
     ev(date(2026, 10, 23), date(2026, 10, 25),
        "Lithuanian Junior Open 2026",
        "ESF / Lithuanian Squash Federation", "Kaunas, Lithuania", "Lithuania",
        "Bronze", "U11/U13/U15/U17/U19 (B&G)",
-       "ESF Junior Circuit Bronze. Source: europeansquash.com/event/lithuanian-junior-open-2026",
-       confirmed=False),
+       "ESF Junior Circuit Bronze. Confirmed on ESF events calendar. "
+       "Source: europeansquash.com/event/lithuanian-junior-open-2026"),
 
     ev(date(2026, 11,  5), date(2026, 11,  8),
        "Polish Junior Open 2026",
@@ -531,8 +531,9 @@ EVENTS = [
        "Irish Junior Open 2026",
        "ESF / Squash Ireland", "Dublin, Ireland", "Ireland",
        "Silver", "U11/U13/U15/U17/U19 (B&G)",
-       "ESF Junior Circuit Silver. Source: europeansquash.com/event/irish-junior-open-2026",
-       confirmed=False),
+       "ESF Junior Circuit Silver. Confirmed on ESF events calendar, 13-15 Nov Dublin "
+       "(Sutton LTC & ALSAA). Entry deadline 30 Oct, 162 players last year. "
+       "Source: europeansquash.com/event/irish-junior-open-2026"),
 
     ev(date(2026, 12, 12), date(2026, 12, 15),
        "Canadian Junior Open 2026",
